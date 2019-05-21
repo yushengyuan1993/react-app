@@ -1,5 +1,5 @@
-// 借助 Express 在启动项目
-
+// 借助 Express 启动项目（`build/`）
+// 当然，在当前项目你并不需要这么干，默认运行 `serve -s build` 就行。
 var express = require('express');
 var app = express();
 

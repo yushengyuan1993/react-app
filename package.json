@@ -3,16 +3,18 @@
   "author": "https://www.yvshare.cn",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://yushengyuan1993.github.io/react-app",
   "dependencies": {
+    "antd-mobile": "^2.2.13",
     "node-sass": "^4.12.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -31,6 +33,9 @@
     ]
   },
   "devDependencies": {
-    "express": "^4.17.0"
+    "babel-plugin-import": "^1.11.2",
+    "customize-cra": "^0.2.12",
+    "express": "^4.17.0",
+    "react-app-rewired": "^2.1.3"
   }
 }

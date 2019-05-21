@@ -5,17 +5,14 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: aliceblue;
+  background-color: snow;
   >#root {
     height: 100%;
-    max-width: 10rem;
+    max-width: 12rem;
     // max-width: 375px;
     margin: 0 auto;
     // padding-bottom: 1rem; // 有底部菜单时
     overflow: hidden;
-    >.App {
-
-    }
   }
 }
 
