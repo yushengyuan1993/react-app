@@ -1,9 +1,6 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-
-// normalize.css
-// import './assets/styles/normalize.css';
-
+// import React from 'react';
+// import ReactDOM from 'react-dom';
+import { React, ReactDOM } from './config.js';
 import './index.scss';
 import App from './App';
 import * as serviceWorker from './serviceWorker';

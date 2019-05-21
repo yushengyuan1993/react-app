@@ -1,6 +1,12 @@
-import React from 'react';
+// import React from 'react';
+import { React, ReactRouter, ReactRouterDOM } from '../config.js';
 import { TabBar } from 'antd-mobile';
 import './tabbar.scss';
+
+// 路由集合 / / / / / / / / / / / /
+import Routes from '../router.js';
+
+// 路由集合 / / / / / / / / / / / /
 
 // 图片资源 / / / / / / / / / / / /
 import product_default from '../assets/images/product_default.png';
@@ -10,6 +16,9 @@ import study_selected from '../assets/images/study_selected.png';
 import mine_default from '../assets/images/mine_default.png';
 import mine_selected from '../assets/images/mine_selected.png';
 // 图片资源 / / / / / / / / / / / /
+
+const { BrowserRouter, Route, Link, withRouter } = ReactRouterDOM;
+// const BrowserHistory = ReactRouter.browserHistory;
 
 class KzTabBar extends React.Component {
   constructor (props) {
@@ -27,9 +36,12 @@ class KzTabBar extends React.Component {
 
   // 选中 选课
   onSelectProducts () {
-    this.setState(() => ({
-      selectedTab: 'products'
-    }));
+    // this.setState(() => ({
+    //   selectedTab: 'products'
+    // }));
+    console.log(withRouter);
+    // ReactRouter.StaticRouter.navigateTo(Routes[0].path);
+    withRouter(Routes[0]);
   }
 
   // 选中 学习
