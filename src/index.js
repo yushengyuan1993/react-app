@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 // normalize.css
-import './assets/styles/normalize.css';
+// import './assets/styles/normalize.css';
 
 import './index.scss';
 import App from './App';

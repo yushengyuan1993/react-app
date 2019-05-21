@@ -5,9 +5,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: snow;
+  background-color: #ffffff;
   >#root {
-    height: 100%;
+    height: 100vh;
+    min-height: 100vh;
     max-width: 12rem;
     // max-width: 375px;
     margin: 0 auto;
