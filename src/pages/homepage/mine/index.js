@@ -8,9 +8,20 @@ class Mine extends React.Component {
     }
   }
 
+  componentDidMount () {
+    // ajax here
+    this.setState({
+      username: 'yushare',
+      email: 'yushare1993@gmail.com'
+    })
+  }
+
   render () {
     return (
-      <div>我的</div>
+      <div>
+        <p>我的</p>
+        <p>{this.username}</p>
+      </div>
     )
   }
 }
