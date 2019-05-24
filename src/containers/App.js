@@ -19,7 +19,7 @@ class App extends React.Component {
   // }
   componentDidMount() {
     // console.log(Router);
-    // console.log(ReactRouter);
+    console.log(ReactRouter);
     console.log(ReactRouterDOM);
   }
   
@@ -27,7 +27,7 @@ class App extends React.Component {
   render () {
     return (
       <div className="App">
-        <Router history={BrowserRouter} children={routes}/>
+        {/* <BrowserRouter children={routes}/> */}
       </div>
     )
   }
