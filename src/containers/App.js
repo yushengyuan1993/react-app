@@ -1,8 +1,9 @@
-import { React, ReactRouter } from '../config.js';
+import { React, ReactRouter, ReactRouterDOM } from '../config.js';
 import routes from '../router.js';
 import './App.scss';
 
-const { browserHistory, hashHistory, BrowserRouter } = ReactRouter;
+const { Router } = ReactRouter;
+const { BrowserRouter, HashRouter } = ReactRouterDOM;
 
 class App extends React.Component {
   // static propTypes = {
@@ -16,11 +17,17 @@ class App extends React.Component {
   // constructor (props) {
   //   super(props);
   // }
+  componentDidMount() {
+    // console.log(Router);
+    // console.log(ReactRouter);
+    console.log(ReactRouterDOM);
+  }
+  
 
   render () {
     return (
       <div className="App">
-        <ReactRouter history={hashHistory} />
+        <Router history={BrowserRouter} children={routes}/>
       </div>
     )
   }
