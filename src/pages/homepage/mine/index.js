@@ -1,26 +1,24 @@
 import { React } from '../../../config.js';
+import TabBar from '../../../components/tabbar.js';
 
 class Mine extends React.Component {
   constructor (props) {
     super(props);
     this.state = {
-      greeter: 'hi, react.'
+      intro: '这是 我的 页面'
     }
   }
 
-  componentDidMount () {
-    // ajax here
-    this.setState({
-      username: 'yushare',
-      email: 'yushare1993@gmail.com'
-    })
+  content () {
+    return (
+      <div>{this.state.intro}</div>
+    )
   }
 
   render () {
     return (
       <div>
-        <p>我的</p>
-        <p>{this.username}</p>
+        <TabBar renderContent={this.content.bind(this)}/>
       </div>
     )
   }
