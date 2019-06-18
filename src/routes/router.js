@@ -19,3 +19,13 @@ const routes = [
 ]
 
 export default routes;
+
+// import React from 'react';
+// import { Route } from 'react-router-dom';
+// import { Products, Study, Mine} from '../pages/homepage';
+
+// export default [
+//   <Route path="/products" component={Products} exact key="products" />,
+//   <Route path="/study" component={Study} exact key="study" />,
+//   <Route path="/mine" component={Mine} exact key="mine" />
+// ];

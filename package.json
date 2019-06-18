@@ -6,11 +6,12 @@
   "homepage": "http://yushengyuan1993.github.io/react-app",
   "dependencies": {
     "antd-mobile": "^2.2.13",
-    "node-sass": "^4.12.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-redux": "^7.1.0",
     "react-router-dom": "^5.0.0",
-    "react-scripts": "3.0.1"
+    "react-scripts": "3.0.1",
+    "redux": "^4.0.1"
   },
   "scripts": {
     "start": "react-app-rewired start",
@@ -37,6 +38,7 @@
     "babel-plugin-import": "^1.11.2",
     "customize-cra": "^0.2.12",
     "express": "^4.17.0",
+    "node-sass": "^4.12.0",
     "react-app-rewired": "^2.1.3"
   }
 }
