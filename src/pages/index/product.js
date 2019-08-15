@@ -1,6 +1,6 @@
 import { React } from '../../react';
 
-class Study extends React.Component {
+class Product extends React.Component {
   constructor (props) {
     super(props);
     this.state = {
@@ -17,4 +17,4 @@ class Study extends React.Component {
   }
 }
 
-export default Study;
+export default Product;

@@ -1,11 +1,11 @@
 import { React, ReactRouterDOM } from '../../react';
 import { List } from 'antd-mobile';
-const { Link } = ReactRouterDOM;
+const { Link, withRouter } = ReactRouterDOM;
 
 const Item = List.Item;
 // const Brief = Item.Brief;
 
-class Study extends React.Component {
+class Mine extends React.Component {
   constructor (props) {
     super(props);
     this.state = {
@@ -41,6 +41,11 @@ class Study extends React.Component {
     console.log(link);
   }
 
+  handleClickItemTest (link) {
+    console.log(this.props);
+    this.props.history.push(link);
+  }
+
   render () {
     let item1 = this.state.list1.map((el, i) => 
       
@@ -62,7 +67,7 @@ class Study extends React.Component {
         extra={el.desc}
         arrow="horizontal"
         multipleLine={true}
-        onClick={(e) => this.handleClickItem(el.link)}
+        onClick={(e) => this.handleClickItemTest(el.link)}
       >
         {el.title}
       </Item>
@@ -93,4 +98,4 @@ class Study extends React.Component {
   }
 }
 
-export default Study;
+export default withRouter(Mine);
