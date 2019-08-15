@@ -18,7 +18,7 @@ import mine_default from '../../assets/images/mine_default.png';
 import mine_selected from '../../assets/images/mine_selected.png';
 // * * 图片资源 * * * * * * * * * * * * * * *
 
-let tab = KZ.getParam('tab') ? KZ.getParam('tab') : 'study';
+let tab = KZ.getParam('tab') ? KZ.getParam('tab') : 'mine';
 
 class Index extends React.Component {
   constructor (props) {

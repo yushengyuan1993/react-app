@@ -1,6 +1,9 @@
 
 import Product from '../pages/index/product.js';
+
 import Order from '../pages/mine/order.js';
+import Remind from '../pages/mine/remind.js';
+import HeadTeacher from '../pages/mine/head-teacher';
 
 const routes = [
   // {
@@ -17,12 +20,12 @@ const routes = [
     component: Order
   },
   {
-    path: "/order",
-    component: Order
+    path: "/remind",
+    component: Remind
   },
   {
-    path: "/order",
-    component: Order
+    path: "/head-teacher",
+    component: HeadTeacher
   },
 ]
 

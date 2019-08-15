@@ -1,23 +1,21 @@
 import { React, ReactRouterDOM } from '../../react';
 const { Link, withRouter } = ReactRouterDOM;
 
-class Order extends React.Component {
+class Remind extends React.Component {
   constructor (props) {
     super(props);
     this.state = {
-      title: 'order'
+      title: 'remind'
     }
-    console.error(props)
   }
-
 
   render () {
     return (
       <div>
-        我的订单
+        学习时间提醒
       </div>
     )
   }
 }
 
-export default withRouter(Order);
+export default withRouter(Remind);

@@ -38,27 +38,25 @@ class Mine extends React.Component {
   }
 
   handleClickItem (link) {
-    console.log(link);
-  }
-
-  handleClickItemTest (link) {
     console.log(this.props);
-    this.props.history.push(link);
+    this.props.history.push({
+      pathname: link,
+      search: 'name=ysy&age=18',
+      state: 'oops'
+    });
   }
 
   render () {
     let item1 = this.state.list1.map((el, i) => 
-      
-      <Link to={el.link} key={i}>
-        <Item
-          extra={el.desc}
-          arrow="horizontal"
-          multipleLine={true}
-          onClick={(e) => this.handleClickItem(el.link)}
-        >
-          {el.title}
-        </Item>
-      </Link>
+      <Item
+        key={i}
+        extra={el.desc}
+        arrow="horizontal"
+        multipleLine={true}
+        onClick={(e) => this.handleClickItem(el.link)}
+      >
+        {el.title}
+      </Item>
     )
 
     let item2 = this.state.list2.map((el, i) => 
@@ -67,7 +65,7 @@ class Mine extends React.Component {
         extra={el.desc}
         arrow="horizontal"
         multipleLine={true}
-        onClick={(e) => this.handleClickItemTest(el.link)}
+        onClick={(e) => this.handleClickItem(el.link)}
       >
         {el.title}
       </Item>
@@ -83,12 +81,12 @@ class Mine extends React.Component {
         </div>
         <div className="menu">
           <div className="item">
-            <List className="item">
+            <List>
               {item1}
             </List>
           </div>
           <div className="item">
-            <List className="item">
+            <List>
               {item2}
             </List>
           </div>
