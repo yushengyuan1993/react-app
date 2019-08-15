@@ -1,0 +1,19 @@
+.index {
+  height: 100vh;
+  min-height: 100vh;
+  .content {
+    width: 100%;
+    height: 100%;
+    >div {
+      &.product {
+
+      }
+      &.study {
+
+      }
+      &.mine {
+        
+      }
+    }
+  }
+}

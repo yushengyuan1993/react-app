@@ -1,5 +1,4 @@
-import { React } from '../../../config.js';
-import TabBar from '../../../components/tabbar.js';
+import { React } from '../../config';
 
 class Study extends React.Component {
   constructor (props) {
@@ -9,16 +8,10 @@ class Study extends React.Component {
     }
   }
 
-  content () {
-    return (
-      <div>{this.state.intro}</div>
-    )
-  }
-
   render () {
     return (
       <div>
-        <TabBar renderContent={this.content.bind(this)}/>
+        学习
       </div>
     )
   }
