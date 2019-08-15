@@ -1,15 +1,27 @@
 
-import { React, ReactDOM, ReactRouterDOM } from './config';
-import indexPage from './pages/index/index';
-import * as serviceWorker from './serviceWorker';
-// import { Provider } from 'react-redux';
-import './assets/styles/init.scss';
+import './config/base.config.js';
 
-const { BrowserRouter, Route } = ReactRouterDOM;
+import { React, ReactDOM, ReactRouterDOM } from './react.js';
+import indexPage from './pages/index/index.js';
+import * as serviceWorker from './serviceWorker.js';
+// import { Provider } from 'react-redux';
+import Routes from './routes/router.js';
+
+import './assets/css/init.scss';
+import './assets/css/coverage.scss';
+
+const { BrowserRouter, Route, Switch } = ReactRouterDOM;
+
+console.log(Routes);
+let route = Routes.map((item, i) => <Route path={item.path} component={item.component} key={i} />)
 
 ReactDOM.render(
   <BrowserRouter>
     <Route path="/index" component={indexPage} exact />
+
+    <Switch>
+      {route}
+    </Switch>
   </BrowserRouter>, document.getElementById('root')
 )
 

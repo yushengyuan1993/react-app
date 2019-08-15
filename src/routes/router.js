@@ -1,21 +1,29 @@
-import Products from '../pages/homepage/products/index';
-import Study from '../pages/homepage/study/index';
-import Mine from '../pages/homepage/mine/index';
+
+import Product from '../pages/index/product.js';
+import Order from '../pages/mine/order.js';
 
 const routes = [
+  // {
+  //   path: "/products",
+  //   exact: true,
+  //   component: Products
+  // },
   {
-    path: "/products",
-    exact: true,
-    component: Products
+    path: "/product",
+    component: Product
   },
   {
-    path: "/study",
-    component: Study
+    path: "/order",
+    component: Order
   },
   {
-    path: "/mine",
-    component: Mine
-  }
+    path: "/order",
+    component: Order
+  },
+  {
+    path: "/order",
+    component: Order
+  },
 ]
 
 export default routes;

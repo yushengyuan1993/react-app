@@ -1,20 +1,20 @@
 import { React } from '../../react';
 
-class Study extends React.Component {
+class Order extends React.Component {
   constructor (props) {
     super(props);
     this.state = {
-      intro: '这是 学习 页面'
+      title: 'order'
     }
   }
 
   render () {
     return (
       <div>
-        学习
+        order
       </div>
     )
   }
 }
 
-export default Study;
+export default Order;

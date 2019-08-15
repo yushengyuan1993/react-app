@@ -1,20 +1,18 @@
 import { React } from '../../react';
 
-class Study extends React.Component {
+class Template extends React.Component {
   constructor (props) {
     super(props);
     this.state = {
-      intro: '这是 学习 页面'
+      title: 'Template'
     }
   }
 
   render () {
     return (
-      <div>
-        学习
-      </div>
+      <div></div>
     )
   }
 }
 
-export default Study;
+export default Template;

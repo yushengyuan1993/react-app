@@ -1,4 +1,4 @@
-import { React } from '../../config';
+import { React } from '../../react';
 
 class Study extends React.Component {
   constructor (props) {
