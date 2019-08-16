@@ -40,7 +40,7 @@ class Footer extends React.Component {
 
   render () {
     return (
-      <div className="tabbar">
+      <div className="component-tabbar">
         <TabBar
           unselectedTintColor="#949494"
           tintColor="#666666"

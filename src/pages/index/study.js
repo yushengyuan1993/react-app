@@ -2,7 +2,7 @@
 import { React, ReactRouterDOM } from '../../react';
 import Tabbar from '../../components/tabbar/tabbar.js';
 
-import './study.scss';
+import style from './study.module.scss';
 
 const { withRouter } = ReactRouterDOM;
 
@@ -18,10 +18,10 @@ class Study extends React.Component {
 
   render () {
     return (
-      <div className="study">
-        <div className="content">学习</div>
+      <div className={style.study}>
+        <div className="content"><p>学习</p></div>
         
-        <div className="footer"><Tabbar tab="study" /></div>
+        <Tabbar tab="study" />
       </div>
     )
   }
