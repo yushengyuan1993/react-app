@@ -81,8 +81,10 @@ module.exports = {
   testsSetup: resolveModule(resolveApp, 'src/setupTests'),
   proxySetup: resolveApp('src/setupProxy.js'),
   appNodeModules: resolveApp('node_modules'),
-  publicUrl: getPublicUrl(resolveApp('package.json')),
-  servedPath: getServedPath(resolveApp('package.json')),
+  // publicUrl: getPublicUrl(resolveApp('package.json')),
+  // servedPath: getServedPath(resolveApp('package.json')),
+  publicUrl: process.env.NODE_ENV === 'development' ? getPublicUrl(resolveApp('package.json')) : '',
+  servedPath: process.env.NODE_ENV === 'development' ? getServedPath(resolveApp('package.json')) : '',
 };
 
 
