@@ -1,4 +1,7 @@
-import { React } from '../../react';
+import { React, ReactRouterDOM } from '../../react';
+import Tabbar from '../../components/tabbar.js';
+
+const { withRouter } = ReactRouterDOM;
 
 class Study extends React.Component {
   constructor (props) {
@@ -10,11 +13,13 @@ class Study extends React.Component {
 
   render () {
     return (
-      <div>
-        学习
+      <div className="study">
+        <div className="content">学习</div>
+        
+        <div className="footer"><Tabbar tab="study" /></div>
       </div>
     )
   }
 }
 
-export default Study;
+export default withRouter(Study);

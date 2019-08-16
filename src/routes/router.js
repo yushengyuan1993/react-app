@@ -1,5 +1,7 @@
 
 import Product from '../pages/index/product.js';
+import Study from '../pages/index/study.js';
+import Mine from '../pages/index/mine.js';
 
 import Order from '../pages/mine/order.js';
 import Remind from '../pages/mine/remind.js';
@@ -15,6 +17,15 @@ const routes = [
     path: "/product",
     component: Product
   },
+  {
+    path: "/study",
+    component: Study
+  },
+  {
+    path: "/mine",
+    component: Mine
+  },
+
   {
     path: "/order",
     component: Order

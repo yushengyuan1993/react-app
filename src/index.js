@@ -2,7 +2,7 @@
 import './config/base.config.js';
 
 import { React, ReactDOM, ReactRouterDOM } from './react.js';
-import indexPage from './pages/index/index.js';
+import indexPage from './pages/index/mine.js';
 import * as serviceWorker from './serviceWorker.js';
 // import { Provider } from 'react-redux';
 import Routes from './routes/router.js';
@@ -18,7 +18,7 @@ let route = Routes.map((item, i) => <Route path={item.path} component={item.comp
 
 ReactDOM.render(
   <BrowserRouter>
-    <Route path="/index" component={indexPage} exact />
+    {/* <Route path="/mine" component={indexPage} exact /> */}
 
     <Switch>
       {route}

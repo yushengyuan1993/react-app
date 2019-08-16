@@ -1,5 +1,8 @@
 import { React, ReactRouterDOM } from '../../react';
+import Tabbar from '../../components/tabbar.js';
 import { List } from 'antd-mobile';
+
+import './mine.scss';
 
 const { withRouter } = ReactRouterDOM;
 
@@ -17,6 +20,61 @@ class Mine extends React.Component {
         {
           title: '我的班主任',
           link: 'head-teacher'
+        },
+        {
+          title: '学习时间提醒',
+          link: 'remind',
+          desc: '10:30'
+        },
+        {
+          title: '学习时间提醒',
+          link: 'remind',
+          desc: '10:30'
+        },
+        {
+          title: '学习时间提醒',
+          link: 'remind',
+          desc: '10:30'
+        },
+        {
+          title: '学习时间提醒',
+          link: 'remind',
+          desc: '10:30'
+        },
+        {
+          title: '学习时间提醒',
+          link: 'remind',
+          desc: '10:30'
+        },
+        {
+          title: '学习时间提醒',
+          link: 'remind',
+          desc: '10:30'
+        },
+        {
+          title: '学习时间提醒',
+          link: 'remind',
+          desc: '10:30'
+        },
+        {
+          title: '学习时间提醒',
+          link: 'remind',
+          desc: '10:30'
+        },
+        {
+          title: '学习时间提醒',
+          link: 'remind',
+          desc: '10:30'
+        },
+        {
+          title: '学习时间提醒',
+          link: 'remind',
+          desc: '10:30'
+        },
+        {
+          title: '学习时间提醒',
+          link: 'remind',
+          desc: '10:30'
         },
         {
           title: '学习时间提醒',
@@ -72,7 +130,7 @@ class Mine extends React.Component {
     )
 
     return (
-      <div>
+      <div className="mine">
         <div className="header">
           <div>
             <div className="avatar"><img src="/static/images/avatar.jpg" alt="avatar"/></div>
@@ -91,6 +149,8 @@ class Mine extends React.Component {
             </List>
           </div>
         </div>
+
+        <div className="footer"><Tabbar tab="mine" /></div>
       </div>
     )
   }

@@ -1,4 +1,9 @@
-import { React } from '../../react';
+import { React, ReactRouterDOM } from '../../react';
+import Tabbar from '../../components/tabbar.js';
+
+import './product.scss';
+
+const { withRouter } = ReactRouterDOM;
 
 class Product extends React.Component {
   constructor (props) {
@@ -10,11 +15,13 @@ class Product extends React.Component {
 
   render () {
     return (
-      <div>
-        商品
+      <div className="product">
+        <div className="content">商品</div>
+
+        <div className="footer"><Tabbar tab="product" /></div>
       </div>
     )
   }
 }
 
-export default Product;
+export default withRouter(Product);
