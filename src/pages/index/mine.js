@@ -1,5 +1,6 @@
+/* eslint-disable no-undef */
 import { React, ReactRouterDOM } from '../../react';
-import Tabbar from '../../components/tabbar.js';
+import Tabbar from '../../components/tabbar/tabbar.js';
 import { List } from 'antd-mobile';
 
 import './mine.scss';
@@ -25,61 +26,6 @@ class Mine extends React.Component {
           title: '学习时间提醒',
           link: 'remind',
           desc: '10:30'
-        },
-        {
-          title: '学习时间提醒',
-          link: 'remind',
-          desc: '10:30'
-        },
-        {
-          title: '学习时间提醒',
-          link: 'remind',
-          desc: '10:30'
-        },
-        {
-          title: '学习时间提醒',
-          link: 'remind',
-          desc: '10:30'
-        },
-        {
-          title: '学习时间提醒',
-          link: 'remind',
-          desc: '10:30'
-        },
-        {
-          title: '学习时间提醒',
-          link: 'remind',
-          desc: '10:30'
-        },
-        {
-          title: '学习时间提醒',
-          link: 'remind',
-          desc: '10:30'
-        },
-        {
-          title: '学习时间提醒',
-          link: 'remind',
-          desc: '10:30'
-        },
-        {
-          title: '学习时间提醒',
-          link: 'remind',
-          desc: '10:30'
-        },
-        {
-          title: '学习时间提醒',
-          link: 'remind',
-          desc: '10:30'
-        },
-        {
-          title: '学习时间提醒',
-          link: 'remind',
-          desc: '10:30'
-        },
-        {
-          title: '学习时间提醒',
-          link: 'remind',
-          desc: '10:30'
         }
       ],
       list2: [
@@ -93,6 +39,8 @@ class Mine extends React.Component {
         }
       ]
     }
+
+    KZ.setRootClassName('active-mine');
   }
 
   handleClickItem (link) {
@@ -150,7 +98,7 @@ class Mine extends React.Component {
           </div>
         </div>
 
-        <div className="footer"><Tabbar tab="mine" /></div>
+        <Tabbar tab="mine" />
       </div>
     )
   }

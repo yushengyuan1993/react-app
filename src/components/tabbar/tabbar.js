@@ -1,17 +1,17 @@
 /* eslint-disable no-undef */
-import { React, ReactRouterDOM } from '../react.js';
+import { React, ReactRouterDOM } from '../../react.js';
 
 import { TabBar } from 'antd-mobile';
 
 import './tabbar.scss';
 
 // * * 图片资源 * * * * * * * * * * * * * * *
-import product_default from '../assets/images/product_default.png';
-import product_selected from '../assets/images/product_selected.png';
-import study_default from '../assets/images/study_default.png';
-import study_selected from '../assets/images/study_selected.png';
-import mine_default from '../assets/images/mine_default.png';
-import mine_selected from '../assets/images/mine_selected.png';
+import product_default from '../../assets/images/product_default.png';
+import product_selected from '../../assets/images/product_selected.png';
+import study_default from '../../assets/images/study_default.png';
+import study_selected from '../../assets/images/study_selected.png';
+import mine_default from '../../assets/images/mine_default.png';
+import mine_selected from '../../assets/images/mine_selected.png';
 // * * 图片资源 * * * * * * * * * * * * * * *
 
 const { withRouter } = ReactRouterDOM;
@@ -47,6 +47,7 @@ class Footer extends React.Component {
           barTintColor="#ffffff"
           hidden={this.state.hidden}
           prerenderingSiblingsNumber={0}
+          noRenderContent={true}
         >
           <TabBar.Item
             title="选课"

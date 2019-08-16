@@ -5,15 +5,17 @@ body.node-body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  // background: linear-gradient(to bottom right, #996, #99C);
-  background: #EEEEEE;
-  >#root {
-    height: 100vh;
-    min-height: 100vh;
-    max-width: 12rem;
-    margin: 0 auto;
-    background-color: #fff;
-  }
+  background: linear-gradient(to bottom right, #996, #99C);
+  // background: #EEEEEE;
+}
+[data-node="root"] {
+  min-height: 100vh;
+  max-width: 12rem;
+  margin: 0 auto;
+  background-color: #fff;
+}
+* {
+  box-sizing: border-box;
 }
 ul,ol,li,h1,h2,h3,h4,h5,h6,input,button,p,th,td { 
   margin: 0; 

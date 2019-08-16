@@ -1,5 +1,8 @@
+/* eslint-disable no-undef */
 import { React, ReactRouterDOM } from '../../react';
-import Tabbar from '../../components/tabbar.js';
+import Tabbar from '../../components/tabbar/tabbar.js';
+
+import './study.scss';
 
 const { withRouter } = ReactRouterDOM;
 
@@ -9,6 +12,8 @@ class Study extends React.Component {
     this.state = {
       intro: '这是 学习 页面'
     }
+
+    KZ.setRootClassName('active-study');
   }
 
   render () {

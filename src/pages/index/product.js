@@ -1,5 +1,6 @@
+/* eslint-disable no-undef */
 import { React, ReactRouterDOM } from '../../react';
-import Tabbar from '../../components/tabbar.js';
+import Tabbar from '../../components/tabbar/tabbar.js';
 
 import './product.scss';
 
@@ -11,6 +12,8 @@ class Product extends React.Component {
     this.state = {
       intro: '这是 商品 页面'
     }
+
+    KZ.setRootClassName('active-product');
   }
 
   render () {
