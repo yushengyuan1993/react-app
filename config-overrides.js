@@ -1,11 +1,30 @@
-const { override, fixBabelImports } = require('customize-cra');
+const { override, fixBabelImports} = require('customize-cra');
 
-// 是否开启 sourcemap
-process.env.GENERATE_SOURCEMAP = "false";
+// override
+module.exports = {
+  webpack: override(
+    // customize-cra plugins here
 
-module.exports = override(
-  fixBabelImports('import', {
-    libraryName: 'antd-mobile',
-    style: 'css',
-  })
-);
+    fixBabelImports('import', {
+      libraryName: 'antd-mobile',
+      style: 'css',
+    }),
+
+    (config) => {
+      return config;
+    },
+  ),
+
+  jest: config => {
+    return config;
+  },
+
+  devServer: configFunction => (proxy, allowedHost) => {
+    const config = configFunction(proxy, allowedHost);
+    return config;
+  },
+
+  paths: (paths, env) => {
+    return paths;
+  }
+};
