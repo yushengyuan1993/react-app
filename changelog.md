@@ -75,7 +75,7 @@
           }
         }
         ```
-  - 添加 `react-router`:
+  - 添加 `react-router-dom`:
       ```sh
       npm install react-router-dom
       ```
