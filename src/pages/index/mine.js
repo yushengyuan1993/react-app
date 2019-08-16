@@ -1,9 +1,9 @@
 import { React, ReactRouterDOM } from '../../react';
 import { List } from 'antd-mobile';
-const { Link, withRouter } = ReactRouterDOM;
+
+const { withRouter } = ReactRouterDOM;
 
 const Item = List.Item;
-// const Brief = Item.Brief;
 
 class Mine extends React.Component {
   constructor (props) {

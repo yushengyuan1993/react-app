@@ -9,6 +9,7 @@ import Routes from './routes/router.js';
 
 import './assets/css/init.scss';
 import './assets/css/coverage.scss';
+import './assets/css/normalize.css';
 
 const { BrowserRouter, Route, Switch } = ReactRouterDOM;
 

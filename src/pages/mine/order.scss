@@ -1,0 +1,23 @@
+.order {
+  height: 100%;
+  background-color: #F6F6F5;
+  >ul {
+    padding: 0.32rem 0;
+    >li {
+      margin: 0.32rem 0;
+      background-color: #ffffff;
+      &:first-of-type, &:last-of-type {
+        margin: 0;
+      }
+      >div {
+        padding: 0 0.4rem;
+        &.header {
+          height: 1.2rem;
+          line-height: 1.2rem;
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+    }
+  }
+}
