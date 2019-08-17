@@ -1,5 +1,4 @@
 import { React, ReactRouterDOM } from '../../react';
-import { ListView } from 'antd-mobile';
 
 import './order.scss';
 

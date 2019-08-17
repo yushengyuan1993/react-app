@@ -1,5 +1,5 @@
 import { React, ReactRouterDOM } from '../../react';
-const { Link, withRouter } = ReactRouterDOM;
+const { withRouter } = ReactRouterDOM;
 
 class Remind extends React.Component {
   constructor (props) {
