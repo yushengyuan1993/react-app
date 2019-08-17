@@ -42,7 +42,10 @@ function RenderContent (props) {
 function RenderOneItem (props) {
   return (
     <div className="one-item">
-      <div className="title">{props.name}</div>
+      <div className={productStyle.title}>
+        <span></span>
+        <strong>{props.name}</strong>
+      </div>
 
     </div>
   )
@@ -50,24 +53,43 @@ function RenderOneItem (props) {
 function RenderOneItemWithText (props) {
   return (
     <div className="one-item-with-text">
-      <div className="title">{props.name}</div>
+      <div className={productStyle.title}>
+        <span></span>
+        <strong>{props.name}</strong>
+      </div>
       
     </div>
   )
 }
 function RenderTwoItem (props) {
   return (
-    <div className="two-item">
-      <div className="title">{props.name}</div>
-      
+    <div className={productStyle['two-item']}>
+      <div className={productStyle.title}>
+        <span></span>
+        <strong>{props.name}</strong>
+      </div>
+      <div className="clearfix">
+        {
+          props.items.map((el, i) => 
+            <div key={i} className={i % 2 === 0 ? 'lf' : 'rt'}>
+              <div>
+                <span style={{background: `url(${el.icon}) no-repeat left center/auto 100%`}}></span>
+                <img src={el.cover} alt="cover" />
+              </div>
+              <div>{el.title}</div>
+              <div>{el.tags}</div>
+              <div>&yen; {el.price}</div>
+            </div>
+          )
+        }
+      </div>
     </div>
   )
 }
 function RenderAdItem (props) {
   return (
     <div className="ad-item">
-      <div className="title">{props.name}</div>
-      
+      广告
     </div>
   )
 }

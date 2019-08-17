@@ -112,7 +112,7 @@ class Order extends React.Component {
         }
     ]
     }
-    console.error(props)
+    // console.error(props)
   }
 
   transformStatus (st) {

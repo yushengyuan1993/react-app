@@ -10,12 +10,14 @@ body.node-body {
 }
 [data-node="root"] {
   min-height: 100vh;
-  max-width: 12rem;
+  // max-width: 12rem;
+  max-width: 10rem;
   margin: 0 auto;
   background-color: #fff;
 }
 * {
   box-sizing: border-box;
+  color: #333;
 }
 ul,ol,li,h1,h2,h3,h4,h5,h6,input,button,p,th,td { 
   margin: 0; 
