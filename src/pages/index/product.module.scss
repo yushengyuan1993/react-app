@@ -76,6 +76,12 @@
           }
         }
       }
+      .ad-item {
+        padding: 0.16rem 0;
+        >img {
+          width: 100%;
+        }
+      }
     }
   }
 }

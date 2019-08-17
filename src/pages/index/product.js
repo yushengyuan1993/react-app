@@ -88,8 +88,8 @@ function RenderTwoItem (props) {
 }
 function RenderAdItem (props) {
   return (
-    <div className="ad-item">
-      广告
+    <div className={productStyle['ad-item']}>
+      <img src={props.items[0].cover} alt="cover" />
     </div>
   )
 }
