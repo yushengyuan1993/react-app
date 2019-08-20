@@ -31,11 +31,11 @@ class Mine extends React.Component {
       list2: [
         {
           title: '我的券包',
-          link: 'order'
+          link: 'coupon'
         },
         {
           title: '兑换好礼',
-          link: 'head-teacher'
+          link: 'store'
         }
       ]
     }

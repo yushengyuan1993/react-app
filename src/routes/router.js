@@ -6,6 +6,8 @@ import Mine from '../pages/index/mine.js';
 import Order from '../pages/mine/order.js';
 import Remind from '../pages/mine/remind.js';
 import HeadTeacher from '../pages/mine/head-teacher';
+import Store from '../pages/mine/store';
+import Coupon from '../pages/mine/coupon';
 
 const routes = [
   // {
@@ -25,7 +27,6 @@ const routes = [
     path: "/mine",
     component: Mine
   },
-
   {
     path: "/order",
     component: Order
@@ -37,6 +38,14 @@ const routes = [
   {
     path: "/head-teacher",
     component: HeadTeacher
+  },
+  {
+    path: "/coupon",
+    component: Coupon
+  },
+  {
+    path: "/store",
+    component: Store
   },
 ]
 

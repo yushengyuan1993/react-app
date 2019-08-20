@@ -1,5 +1,7 @@
 import { React } from '../../react';
 
+import './Template.scss';
+
 class Template extends React.Component {
   constructor (props) {
     super(props);

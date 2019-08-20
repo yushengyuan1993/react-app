@@ -1,20 +1,20 @@
 import { React, ReactRouterDOM } from '../../react';
 
+import './head-teacher.scss';
+
 const { withRouter } = ReactRouterDOM;
 
 class HeadTeacher extends React.Component {
   constructor (props) {
     super(props);
     this.state = {
-      title: 'head-teacher'
+      title: '我的班主任'
     }
   }
 
   render () {
     return (
-      <div>
-        我的班主任
-      </div>
+      <div className="head-teacher">{this.state.title}</div>
     )
   }
 }
