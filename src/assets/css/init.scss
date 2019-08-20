@@ -5,18 +5,19 @@ body.node-body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  // background: linear-gradient(to bottom right, #996, #99C);
-  background: #EEEEEE;
-  >#root {
-    height: 100vh;
-    min-height: 100vh;
-    max-width: 12rem;
-    // max-width: 375px;
-    margin: 0 auto;
-    // padding-bottom: 1rem; // 有底部菜单时
-    overflow: hidden;
-    background-color: #fff;
-  }
+  background: linear-gradient(to bottom right, #996, #99C);
+  // background: #EEEEEE;
+}
+[data-node="root"] {
+  min-height: 100vh;
+  // max-width: 12rem;
+  max-width: 10rem;
+  margin: 0 auto;
+  background-color: #fff;
+}
+* {
+  box-sizing: border-box;
+  color: #333;
 }
 ul,ol,li,h1,h2,h3,h4,h5,h6,input,button,p,th,td { 
   margin: 0; 

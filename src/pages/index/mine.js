@@ -1,5 +1,9 @@
+/* eslint-disable no-undef */
 import { React, ReactRouterDOM } from '../../react';
+import Tabbar from '../../components/tabbar/tabbar.js';
 import { List } from 'antd-mobile';
+
+import './mine.scss';
 
 const { withRouter } = ReactRouterDOM;
 
@@ -35,6 +39,8 @@ class Mine extends React.Component {
         }
       ]
     }
+
+    KZ.setRootClassName('active-mine');
   }
 
   handleClickItem (link) {
@@ -72,7 +78,7 @@ class Mine extends React.Component {
     )
 
     return (
-      <div>
+      <div className="mine">
         <div className="header">
           <div>
             <div className="avatar"><img src="/static/images/avatar.jpg" alt="avatar"/></div>
@@ -91,6 +97,8 @@ class Mine extends React.Component {
             </List>
           </div>
         </div>
+
+        <Tabbar tab="mine" />
       </div>
     )
   }

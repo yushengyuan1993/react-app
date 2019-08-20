@@ -149,6 +149,11 @@ export default {
     }
   },
 
+  // 设置 #root 的 class
+  setRootClassName (cls) {
+    document.querySelector('#root').className = cls;
+  },
+
   // 移除数组指定值的元素
   removeArrayEl (arr, v) {
     let i = arr.indexOf(v);

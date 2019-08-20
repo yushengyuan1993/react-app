@@ -1,5 +1,6 @@
 import { React, ReactRouterDOM } from '../../react';
-const {  withRouter } = ReactRouterDOM;
+
+const { withRouter } = ReactRouterDOM;
 
 class HeadTeacher extends React.Component {
   constructor (props) {

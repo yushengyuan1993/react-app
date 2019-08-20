@@ -10,12 +10,12 @@ class Order extends React.Component {
     this.state = {
       list:  [
         {
-            "course_image": "static/images/course/1.png",
-            "course_name": "魔法作文课",
+            "cover": "static/images/course/1.png",
+            "title": "魔法作文课",
             "course_price": "59.00",
             "course_subject": 0,
             "promotional_price": "59.00",
-            "course_status": 2,
+            "status": 1,
             "course_status_desc": "开课中",
             "order_id": 172641,
             "order_num": "20190603509022081917",
@@ -26,12 +26,12 @@ class Order extends React.Component {
             "order_create_time": "2019-06-03 13:47:23"
         },
         {
-            "course_image": "static/images/course/2.png",
-            "course_name": "改变世界的十大科学家",
+            "cover": "static/images/course/2.png",
+            "title": "改变世界的十大科学家",
             "course_price": "24.90",
             "course_subject": 2,
             "promotional_price": "9.90",
-            "course_status": 2,
+            "status": 1,
             "course_status_desc": "开课中",
             "order_id": 172563,
             "order_num": "20190603855358580974",
@@ -43,12 +43,12 @@ class Order extends React.Component {
             "order_create_time": "2019-06-03 10:53:29"
         },
         {
-            "course_image": "static/images/course/3.png",
-            "course_name": "封神演义",
+            "cover": "static/images/course/3.png",
+            "title": "封神演义",
             "course_price": "5.00",
             "course_subject": 0,
             "promotional_price": "1.00",
-            "course_status": 2,
+            "status": 1,
             "course_status_desc": "开课中",
             "order_id": 171412,
             "order_num": "20190601529265681864",
@@ -60,12 +60,12 @@ class Order extends React.Component {
             "order_create_time": "2019-06-01 18:43:36"
         },
         {
-            "course_image": "static/images/course/4.png",
-            "course_name": "孩子最爱的拼音动画课",
+            "cover": "static/images/course/4.png",
+            "title": "孩子最爱的拼音动画课",
             "course_price": "5.00",
             "course_subject": 0,
             "promotional_price": "1.00",
-            "course_status": 2,
+            "status": 2,
             "course_status_desc": "开课中",
             "order_id": 171395,
             "order_num": "20190601173926309932",
@@ -77,12 +77,12 @@ class Order extends React.Component {
             "order_create_time": "2019-06-01 18:16:04"
         },
         {
-            "course_image": "static/images/course/5.png",
-            "course_name": "少年世界史",
+            "cover": "static/images/course/5.png",
+            "title": "少年世界史",
             "course_price": "5.00",
             "course_subject": 0,
             "promotional_price": "1.00",
-            "course_status": 2,
+            "status": 2,
             "course_status_desc": "开课中",
             "order_id": 171386,
             "order_num": "20190601113259445045",
@@ -94,12 +94,12 @@ class Order extends React.Component {
             "order_create_time": "2019-06-01 18:04:22"
         },
         {
-            "course_image": "static/images/course/6.png",
-            "course_name": "看图写话三步法",
+            "cover": "static/images/course/6.png",
+            "title": "看图写话三步法",
             "course_price": "5.00",
             "course_subject": 0,
             "promotional_price": "1.00",
-            "course_status": 2,
+            "status": 0,
             "course_status_desc": "开课中",
             "order_id": 171380,
             "order_num": "20190601640298811790",
@@ -112,25 +112,40 @@ class Order extends React.Component {
         }
     ]
     }
-    console.error(props)
+    // console.error(props)
   }
 
+  transformStatus (st) {
+    if (st === 1) {
+      return '付款成功'
+    } else if (st === 2) {
+      return '已退款'
+    } else {
+      return '待付款'
+    }
+  }
 
   render () {
     let item = this.state.list.map((el, i) => 
       <li key={i}>
         <div className="header border-top">
-          <div className="order-num">left</div>
-          <div className="order-status">right</div>
+          <div className="order-num">订单编号：<span>{el.order_num}</span></div>
+          <div className="order-status">{this.transformStatus(el.status)}</div>
         </div>
         <div className="body border-top">
-          body
+          <div className="left">
+            <div className="cover"><img src={el.cover} alt={el.title}/></div>
+            <div className="title"><p>{el.title}</p></div>
+          </div>
+          <div className="right price">12.2</div>
         </div>
         <div className="footer">
-          footer
+          <div className="time"><span>{el.order_create_time}</span></div>
+          <div className="detail">共1件商品 合计: &yen;<span>{el.promotional_price}</span></div>
         </div>
       </li>
     )
+
     return (
       <div className="order">
         <ul>

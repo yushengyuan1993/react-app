@@ -17,6 +17,38 @@
           display: flex;
           justify-content: space-between;
         }
+        &.body {
+          display: flex;
+          justify-content: space-between;
+          padding: 0.32rem 0.4rem;
+          >div {
+            &.left {
+              display: flex;
+              width: 80%;
+              >div {
+                &.cover {
+                  >img {
+                    width: 2rem;
+                    height: 2rem;
+                  }
+                }
+                &.title {
+                  margin-left: 0.32rem;
+                }
+              }
+            }
+            &.right {
+              width: 20%;
+              text-align: right;
+            }
+          }
+        }
+        &.footer {
+          display: flex;
+          justify-content: space-between;
+          height: 1.2rem;
+          line-height: 1.2rem;
+        }
       }
     }
   }

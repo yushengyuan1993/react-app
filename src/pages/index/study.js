@@ -1,4 +1,10 @@
-import { React } from '../../react';
+/* eslint-disable no-undef */
+import { React, ReactRouterDOM } from '../../react';
+import Tabbar from '../../components/tabbar/tabbar.js';
+
+import style from './study.module.scss';
+
+const { withRouter } = ReactRouterDOM;
 
 class Study extends React.Component {
   constructor (props) {
@@ -6,15 +12,19 @@ class Study extends React.Component {
     this.state = {
       intro: '这是 学习 页面'
     }
+
+    KZ.setRootClassName('active-study');
   }
 
   render () {
     return (
-      <div>
-        学习
+      <div className={style.study}>
+        <div className="content"><p>学习</p></div>
+        
+        <Tabbar tab="study" />
       </div>
     )
   }
 }
 
-export default Study;
+export default withRouter(Study);

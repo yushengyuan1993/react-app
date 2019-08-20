@@ -1,0 +1,67 @@
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  height: 1.6rem;
+  // max-width: 12rem;
+  max-width: 10rem;
+  padding: 0.32rem 0.4rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  >div {
+    width: 50%;
+    &:first-of-type {
+      >span {
+        display: inline-block;
+        height: 0.96rem;
+        line-height: 0.96rem;
+        &:first-of-type {
+          >img {
+            width: 0.96rem;
+            height: 0.96rem;
+            border: 0.053333rem solid #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 0.16rem 0 rgba(0, 0, 0, 0.2);
+          }
+        }
+        &:last-of-type {
+          margin-left: 0.24rem;
+          font-size: 0.426667rem;
+          color: #666;
+        }
+      }
+    }
+    &:last-of-type {
+      text-align: right;
+      >a {
+        display: inline-block;
+        height: 0.96rem;
+        >span {
+          display: inline-block;
+          height: 0.96rem;
+          line-height: 0.96rem;
+          vertical-align: top;
+          &:first-of-type {
+            width: 0.96rem;
+          }
+          &:last-of-type {
+            color: #666;
+          }
+        }
+        &:first-of-type {
+          >span:first-of-type {
+            background: url('/static/images/icons/coin.png') no-repeat center/70%;
+          }
+        }
+        &:last-of-type {
+          margin-left: 0.4rem;
+          >span:first-of-type {
+            background: url('/static/images/icons/carrot.png') no-repeat center/70%;
+          }
+        }
+      }
+    }
+  }
+}
