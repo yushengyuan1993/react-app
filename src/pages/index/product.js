@@ -46,7 +46,6 @@ function RenderOneItem (props) {
         <span></span>
         <strong>{props.name}</strong>
       </div>
-
     </div>
   )
 }
@@ -57,7 +56,6 @@ function RenderOneItemWithText (props) {
         <span></span>
         <strong>{props.name}</strong>
       </div>
-      
     </div>
   )
 }
