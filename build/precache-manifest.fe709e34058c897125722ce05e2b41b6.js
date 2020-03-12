@@ -1,7 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f2cac5b26f6b55d3f7e51dade99861f7",
-    "url": "README.md"
+    "revision": "f8d28463177dae174901e62d684e4979",
+    "url": "3276170_ace.yvshare.cn.key"
+  },
+  {
+    "revision": "8e175e4bd7a65f5b11615fdb9eb1edeb",
+    "url": "3276170_ace.yvshare.cn.pem"
   },
   {
     "revision": "b3a10a50dd1c6e35aab30bebe35f6132",

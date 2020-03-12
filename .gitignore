@@ -25,6 +25,6 @@ yarn-error.log*
 
 ### customs
 tree.txt
-*.key
-*.pem
-*.crt
+./*.key
+./*.pem
+./*.crt
