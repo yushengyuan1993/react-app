@@ -1,5 +1,9 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
+    "revision": "f2cac5b26f6b55d3f7e51dade99861f7",
+    "url": "README.md"
+  },
+  {
     "revision": "b3a10a50dd1c6e35aab30bebe35f6132",
     "url": "index.html"
   },
