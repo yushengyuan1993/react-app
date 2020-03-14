@@ -53,7 +53,7 @@ class Mine extends React.Component {
   }
 
   render () {
-    let item1 = this.state.list1.map((el, i) => 
+    const item1 = this.state.list1.map((el, i) => 
       <Item
         key={i}
         extra={el.desc}
@@ -65,7 +65,7 @@ class Mine extends React.Component {
       </Item>
     )
 
-    let item2 = this.state.list2.map((el, i) => 
+    const item2 = this.state.list2.map((el, i) => 
       <Item
         key={i}
         extra={el.desc}

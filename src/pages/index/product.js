@@ -15,10 +15,10 @@ const { withRouter } = ReactRouterDOM;
 
 
 function RenderContent (props) {
-  let list = props.data;
+  const list = props.data;
 
   const item = list.map((el, i) => {
-    let type = el.type;
+    const type = el.type;
 
     switch (type) {
       case 'one_item':

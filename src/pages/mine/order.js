@@ -126,7 +126,7 @@ class Order extends React.Component {
   }
 
   render () {
-    let item = this.state.list.map((el, i) => 
+    const item = this.state.list.map((el, i) => 
       <li key={i}>
         <div className="header border-top">
           <div className="order-num">订单编号：<span>{el.order_num}</span></div>

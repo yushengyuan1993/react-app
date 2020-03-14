@@ -13,7 +13,7 @@ import './assets/css/normalize.css';
 const { BrowserRouter, Route, Switch } = ReactRouterDOM;
 
 console.log(Routes);
-let route = Routes.map((item, i) => <Route path={item.path} component={item.component} key={i} />)
+const route = Routes.map((item, i) => <Route path={item.path} component={item.component} key={i} />)
 
 ReactDOM.render(
   <BrowserRouter>
