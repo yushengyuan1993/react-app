@@ -12,7 +12,7 @@ import './assets/css/normalize.css';
 
 console.log(router_list);
 
-const { BrowserRouter, Route, /* Switch */ } = ReactRouterDOM;
+const { BrowserRouter, Route, Switch } = ReactRouterDOM;
 
 const route = router_list.map((item, i) => {
   return <Route path={item.path} component={item.component} key={i} />;
@@ -20,9 +20,9 @@ const route = router_list.map((item, i) => {
 
 ReactDOM.render(
   <BrowserRouter>
-    {/* <Switch> */}
+    <Switch>
       {route}
-    {/* </Switch> */}
+    </Switch>
   </BrowserRouter>
   , document.getElementById('root')
 )
