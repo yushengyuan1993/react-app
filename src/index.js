@@ -3,27 +3,29 @@ import './config/base.config.js';
 
 import { React, ReactDOM, ReactRouterDOM } from './react.js';
 import * as serviceWorker from './serviceWorker.js';
-// import { Provider } from 'react-redux';
-import router_list from './routes/router.js';
+import { Provider } from 'react-redux';
+import routers from './routes/router.js';
 
 import './assets/css/init.scss';
 import './assets/css/coverage.scss';
 import './assets/css/normalize.css';
 
-console.log(router_list);
+// console.log(routers);
 
 const { BrowserRouter, Route, Switch } = ReactRouterDOM;
 
-const route = router_list.map((item, i) => {
+const route = routers.map((item, i) => {
   return <Route path={item.path} component={item.component} key={i} />;
 });
 
 ReactDOM.render(
-  <BrowserRouter>
-    <Switch>
-      {route}
-    </Switch>
-  </BrowserRouter>
+  <Provider>
+    <BrowserRouter>
+      <Switch>
+        {route}
+      </Switch>
+    </BrowserRouter>
+  </Provider>
   , document.getElementById('root')
 )
 

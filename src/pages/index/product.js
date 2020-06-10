@@ -8,7 +8,7 @@ import Header from '../../components/header/header.js';
 
 import productStyle from './product.module.scss';
 
-import productList from '../../data/product_list.js';
+import productList from '../../mock/product_list.js';
 
 const { withRouter } = ReactRouterDOM;
 // const banner = ['static/images/course/8.png', 'static/images/course/9.png', 'static/images/course/10.png'];
