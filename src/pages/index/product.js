@@ -12,35 +12,7 @@ import productList from '../../mock/product_list.js';
 
 // const banner = ['static/images/course/8.png', 'static/images/course/9.png', 'static/images/course/10.png'];
 
-
-function RenderContent (props) {
-  const list = props.data;
-
-  const item = list.map((el, i) => {
-    const type = el.type;
-
-    switch (type) {
-      case 'one_item':
-        return <RenderOneItem key={i} items={el.items} name={el.name} type={el.type} />
-      
-      case 'one_item_with_text':
-        return <RenderOneItemWithText key={i} items={el.items} name={el.name} type={el.type} />
-      
-      case 'two_item':
-        return <RenderTwoItem key={i} items={el.items} name={el.name} type={el.type} />
-
-      case 'ad':
-        return <RenderAdItem key={i} items={el.items} name={el.name} type={el.type} />
-
-      default:
-        return null;
-    }
-  })
-
-  return item;
-}
-
-function RenderOneItem (props) {
+const RenderOneItem = (props) => {
   return (
     <div className="one-item">
       <div className={productStyle.title}>
@@ -51,7 +23,7 @@ function RenderOneItem (props) {
     </div>
   )
 }
-function RenderOneItemWithText (props) {
+const RenderOneItemWithText = (props) => {
   return (
     <div className="one-item-with-text">
       <div className={productStyle.title}>
@@ -62,7 +34,7 @@ function RenderOneItemWithText (props) {
     </div>
   )
 }
-function RenderTwoItem (props) {
+const RenderTwoItem = (props) => {
   return (
     <div className={productStyle['two-item']}>
       <div className={productStyle.title}>
@@ -87,12 +59,39 @@ function RenderTwoItem (props) {
     </div>
   )
 }
-function RenderAdItem (props) {
+const RenderAdItem = (props) => {
   return (
     <div className={productStyle['ad-item']}>
       <img src={props.items[0].cover} alt="cover" />
     </div>
   )
+}
+
+const RenderContent = (props) => {
+  const list = props.data;
+
+  const item = list.map((el, i) => {
+    const type = el.type;
+
+    switch (type) {
+      case 'one_item':
+        return <RenderOneItem key={i} items={el.items} name={el.name} type={el.type} />
+      
+      case 'one_item_with_text':
+        return <RenderOneItemWithText key={i} items={el.items} name={el.name} type={el.type} />
+      
+      case 'two_item':
+        return <RenderTwoItem key={i} items={el.items} name={el.name} type={el.type} />
+
+      case 'ad':
+        return <RenderAdItem key={i} items={el.items} name={el.name} type={el.type} />
+
+      default:
+        return null;
+    }
+  })
+
+  return item;
 }
 
 class Product extends Component {

@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 // import { Provider } from 'react-redux';
 
 import './config/base.config';
@@ -18,12 +18,12 @@ const route = routers.map((item, i) => {
 });
 
 ReactDOM.render(
-  <BrowserRouter>
+  <Router>
     <Switch>
       {route}
       <Redirect from='/' to='/product' />
     </Switch>
-  </BrowserRouter>
+  </Router>
   ,document.getElementById('root')
 );
 
