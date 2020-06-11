@@ -1,5 +1,6 @@
 /* eslint-disable no-undef */
-import { React, ReactRouterDOM } from '../../react';
+import React from 'react';
+import { withRouter } from 'react-router-dom';
 
 // import { Carousel, WingBlank } from 'antd-mobile';
 
@@ -10,7 +11,6 @@ import productStyle from './product.module.scss';
 
 import productList from '../../mock/product_list.js';
 
-const { withRouter } = ReactRouterDOM;
 // const banner = ['static/images/course/8.png', 'static/images/course/9.png', 'static/images/course/10.png'];
 
 

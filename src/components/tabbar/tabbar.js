@@ -1,5 +1,5 @@
-/* eslint-disable no-undef */
-import { React, ReactRouterDOM } from '../../react';
+import React from 'react';
+import { withRouter } from 'react-router-dom';
 
 import { TabBar } from 'antd-mobile';
 
@@ -13,8 +13,6 @@ import study_selected from '../../assets/images/study_selected.png';
 import mine_default from '../../assets/images/mine_default.png';
 import mine_selected from '../../assets/images/mine_selected.png';
 // * * 图片资源 * * * * * * * * * * * * * * *
-
-const { withRouter } = ReactRouterDOM;
 
 class Footer extends React.Component {
   constructor (props) {

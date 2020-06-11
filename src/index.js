@@ -1,32 +1,28 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+// import { Provider } from 'react-redux';
 
-import './config/base.config.js';
+import './config/base.config';
 
-import { React, ReactDOM, ReactRouterDOM } from './react';
-import * as serviceWorker from './serviceWorker.js';
-import { Provider } from 'react-redux';
-import routers from './routes/router.js';
+import * as serviceWorker from './serviceWorker';
+import routers from './routes/router';
 
 import './assets/css/init.scss';
 import './assets/css/coverage.scss';
 import './assets/css/normalize.css';
-
-// console.log(routers);
-
-const { BrowserRouter, Route, Switch } = ReactRouterDOM;
 
 const route = routers.map((item, i) => {
   return <Route path={item.path} component={item.component} key={i} />;
 });
 
 ReactDOM.render(
-  <Provider>
-    <BrowserRouter>
-      <Switch>
-        {route}
-      </Switch>
-    </BrowserRouter>
-  </Provider>
-  , document.getElementById('root')
+  <BrowserRouter>
+    <Switch>
+      {route}
+    </Switch>
+  </BrowserRouter>
+  ,document.getElementById('root')
 )
 
 // If you want your app to work offline and load faster, you can change

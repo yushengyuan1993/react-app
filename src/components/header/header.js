@@ -1,9 +1,7 @@
-/* eslint-disable no-undef */
-import { React, ReactRouterDOM } from '../../react';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 import style from './header.module.scss';
-
-const { Link } = ReactRouterDOM;
 
 class Header extends React.Component {
   constructor (props) {

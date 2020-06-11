@@ -1,11 +1,11 @@
 /* eslint-disable no-undef */
-import { React, ReactRouterDOM } from '../../react';
+import React from 'react';
+import { withRouter } from 'react-router-dom'
+
 import Tabbar from '../../components/tabbar/tabbar.js';
 import { List } from 'antd-mobile';
 
 import './mine.scss';
-
-const { withRouter } = ReactRouterDOM;
 
 const Item = List.Item;
 

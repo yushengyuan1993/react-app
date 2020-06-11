@@ -1,8 +1,7 @@
-import { React, ReactRouterDOM } from '../../react';
+import React from 'react';
+import { withRouter } from 'react-router-dom';
 
 import './order.scss';
-
-const { withRouter } = ReactRouterDOM;
 
 class Order extends React.Component {
   constructor (props) {

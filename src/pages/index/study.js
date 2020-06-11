@@ -1,10 +1,10 @@
 /* eslint-disable no-undef */
-import { React, ReactRouterDOM } from '../../react';
+import React from 'react';
+import { withRouter } from 'react-router-dom';
+
 import Tabbar from '../../components/tabbar/tabbar.js';
 
 import style from './study.module.scss';
-
-const { withRouter } = ReactRouterDOM;
 
 class Study extends React.Component {
   constructor (props) {
