@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-import { React, ReactRouterDOM } from '../../react.js';
+import { React, ReactRouterDOM } from '../../react';
 
 import { TabBar } from 'antd-mobile';
 

@@ -1,7 +1,7 @@
 
 import './config/base.config.js';
 
-import { React, ReactDOM, ReactRouterDOM } from './react.js';
+import { React, ReactDOM, ReactRouterDOM } from './react';
 import * as serviceWorker from './serviceWorker.js';
 import { Provider } from 'react-redux';
 import routers from './routes/router.js';
