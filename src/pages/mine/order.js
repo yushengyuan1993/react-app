@@ -1,9 +1,8 @@
-import React from 'react';
-import { withRouter } from 'react-router-dom';
+import React, { Component } from 'react';
 
 import './order.scss';
 
-class Order extends React.Component {
+class Order extends Component {
   constructor (props) {
     super(props);
     this.state = {
@@ -155,4 +154,4 @@ class Order extends React.Component {
   }
 }
 
-export default withRouter(Order);
+export default Order;

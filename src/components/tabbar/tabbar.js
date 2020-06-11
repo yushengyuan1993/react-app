@@ -1,5 +1,4 @@
-import React from 'react';
-import { withRouter } from 'react-router-dom';
+import React, { Component } from 'react';
 
 import { TabBar } from 'antd-mobile';
 
@@ -14,7 +13,7 @@ import mine_default from '../../assets/images/mine_default.png';
 import mine_selected from '../../assets/images/mine_selected.png';
 // * * 图片资源 * * * * * * * * * * * * * * *
 
-class Footer extends React.Component {
+class Footer extends Component {
   constructor (props) {
     super(props);
     this.state = {
@@ -114,4 +113,4 @@ class Footer extends React.Component {
   }
 }
 
-export default withRouter(Footer);
+export default Footer;

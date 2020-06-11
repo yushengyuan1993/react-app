@@ -1,12 +1,11 @@
 /* eslint-disable no-undef */
-import React from 'react';
-import { withRouter } from 'react-router-dom';
+import React, { Component } from 'react';
 
 import Tabbar from '../../components/tabbar/tabbar.js';
 
 import style from './study.module.scss';
 
-class Study extends React.Component {
+class Study extends Component {
   constructor (props) {
     super(props);
     this.state = {
@@ -27,4 +26,4 @@ class Study extends React.Component {
   }
 }
 
-export default withRouter(Study);
+export default Study;

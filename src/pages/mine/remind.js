@@ -1,7 +1,6 @@
-import React from 'react';
-import { withRouter } from 'react-router-dom';
+import React, { Component } from 'react';
 
-class Remind extends React.Component {
+class Remind extends Component {
   constructor (props) {
     super(props);
     this.state = {
@@ -18,4 +17,4 @@ class Remind extends React.Component {
   }
 }
 
-export default withRouter(Remind);
+export default Remind;

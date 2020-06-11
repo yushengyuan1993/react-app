@@ -1,6 +1,5 @@
 /* eslint-disable no-undef */
-import React from 'react';
-import { withRouter } from 'react-router-dom';
+import React, { Component } from 'react';
 
 // import { Carousel, WingBlank } from 'antd-mobile';
 
@@ -96,7 +95,7 @@ function RenderAdItem (props) {
   )
 }
 
-class Product extends React.Component {
+class Product extends Component {
 
   constructor (props) {
     super(props);
@@ -129,4 +128,4 @@ class Product extends React.Component {
   }
 }
 
-export default withRouter(Product);
+export default Product;

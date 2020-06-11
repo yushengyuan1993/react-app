@@ -1,7 +1,6 @@
-import React from 'react';
-import { withRouter } from 'react-router-dom';
+import React, { Component } from 'react';
 
-class HeadTeacher extends React.Component {
+class HeadTeacher extends Component {
   constructor (props) {
     super(props);
     this.state = {
@@ -18,4 +17,4 @@ class HeadTeacher extends React.Component {
   }
 }
 
-export default withRouter(HeadTeacher);
+export default HeadTeacher;

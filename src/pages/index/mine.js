@@ -1,6 +1,5 @@
 /* eslint-disable no-undef */
-import React from 'react';
-import { withRouter } from 'react-router-dom'
+import React, { Component } from 'react';
 
 import Tabbar from '../../components/tabbar/tabbar.js';
 import { List } from 'antd-mobile';
@@ -9,7 +8,7 @@ import './mine.scss';
 
 const Item = List.Item;
 
-class Mine extends React.Component {
+class Mine extends Component {
   constructor (props) {
     super(props);
     this.state = {
@@ -104,4 +103,4 @@ class Mine extends React.Component {
   }
 }
 
-export default withRouter(Mine);
+export default Mine;
