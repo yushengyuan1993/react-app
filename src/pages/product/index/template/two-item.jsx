@@ -17,15 +17,15 @@ class TwoItem extends Component {
         </div>
         <div className="clearfix">
           {
-            this.props.items.map((el, i) => 
-              <div key={i} className={i % 2 === 0 ? 'lf' : 'rt'}>
+            this.props.items.map((item, i) => 
+              <div key={item.product_id} className={i % 2 === 0 ? 'lf' : 'rt'}>
                 <div>
-                  <span style={{background: `url(${el.icon}) no-repeat left center/auto 100%`}}></span>
-                  <img src={el.cover} alt="cover" />
+                  <span style={{background: `url(${item.icon}) no-repeat left center/auto 100%`}}></span>
+                  <img src={item.cover} alt="cover" />
                 </div>
-                <div>{el.title}</div>
-                <div>{el.tags}</div>
-                <div>&yen; {el.price}</div>
+                <div>{item.title}</div>
+                <div>{item.tags}</div>
+                <div>&yen; {item.price}</div>
               </div>
             )
           }
