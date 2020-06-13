@@ -8,7 +8,7 @@ import Header from '../../../components/header/header.js';
 
 import productStyle from './index.module.scss';
 
-import productList from '../../../mock/product_list.js';
+import productList from '../../../mock/product_v2.js';
 
 // const banner = ['static/images/course/8.png', 'static/images/course/9.png', 'static/images/course/10.png'];
 

@@ -13,9 +13,7 @@ import './assets/css/init.scss';
 import './assets/css/coverage.scss';
 import './assets/css/normalize.css';
 
-const route = routers.map((item, i) => {
-  return <Route path={item.path} component={item.component} key={i} />;
-});
+const route = routers.map((item, i) => <Route path={item.path} component={item.component} key={i} />);
 
 ReactDOM.render(
   <Router>
