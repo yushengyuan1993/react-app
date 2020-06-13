@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+// import style from './teacher.scss';
+
 class HeadTeacher extends Component {
   constructor (props) {
     super(props);

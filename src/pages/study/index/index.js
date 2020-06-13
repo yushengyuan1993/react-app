@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 
 import Tabbar from '../../../components/tabbar/tabbar.js';
 
-import style from './study.module.scss';
+import style from './index.module.scss';
 
 class Study extends Component {
   constructor (props) {

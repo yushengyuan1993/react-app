@@ -6,7 +6,7 @@ import React, { Component } from 'react';
 import Tabbar from '../../../components/tabbar/tabbar.js';
 import Header from '../../../components/header/header.js';
 
-import productStyle from './product.module.scss';
+import productStyle from './index.module.scss';
 
 import productList from '../../../mock/product_list.js';
 

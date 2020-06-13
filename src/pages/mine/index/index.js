@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import Tabbar from '../../../components/tabbar/tabbar.js';
 import { List } from 'antd-mobile';
 
-import './mine.scss';
+import './index.scss';
 
 const Item = List.Item;
 

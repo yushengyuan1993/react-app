@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+// import style from './index.scss';
+
 class Remind extends Component {
   constructor (props) {
     super(props);
