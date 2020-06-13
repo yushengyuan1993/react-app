@@ -3,66 +3,27 @@ import React, { Component } from 'react';
 
 // import { Carousel, WingBlank } from 'antd-mobile';
 
-import Tabbar from '../../../components/tabbar/tabbar.js';
-import Header from '../../../components/header/header.js';
+import productList from '../../../mock/product_v2';
 
-import productStyle from './index.module.scss';
+import Tabbar from '../../../components/tabbar/tabbar';
+import Header from '../../../components/header/header';
 
-import productList from '../../../mock/product_v2.js';
+import TwoItem from './template/two-item';
+import AdItem from './template/ad-item';
+import OneItem from './template/one-item';
+
+import styleClass from './index.module.scss';
 
 // const banner = ['static/images/course/8.png', 'static/images/course/9.png', 'static/images/course/10.png'];
 
-const RenderOneItem = (props) => {
-  return (
-    <div className="one-item">
-      <div className={productStyle.title}>
-        <span></span>
-        <strong>{props.name}</strong>
-      </div>
-
-    </div>
-  )
-}
 const RenderOneItemWithText = (props) => {
   return (
     <div className="one-item-with-text">
-      <div className={productStyle.title}>
+      <div className={styleClass.title}>
         <span></span>
         <strong>{props.name}</strong>
       </div>
       
-    </div>
-  )
-}
-const RenderTwoItem = (props) => {
-  return (
-    <div className={productStyle['two-item']}>
-      <div className={productStyle.title}>
-        <span></span>
-        <strong>{props.name}</strong>
-      </div>
-      <div className="clearfix">
-        {
-          props.items.map((el, i) => 
-            <div key={i} className={i % 2 === 0 ? 'lf' : 'rt'}>
-              <div>
-                <span style={{background: `url(${el.icon}) no-repeat left center/auto 100%`}}></span>
-                <img src={el.cover} alt="cover" />
-              </div>
-              <div>{el.title}</div>
-              <div>{el.tags}</div>
-              <div>&yen; {el.price}</div>
-            </div>
-          )
-        }
-      </div>
-    </div>
-  )
-}
-const RenderAdItem = (props) => {
-  return (
-    <div className={productStyle['ad-item']}>
-      <img src={props.items[0].cover} alt="cover" />
     </div>
   )
 }
@@ -75,16 +36,40 @@ const RenderContent = (props) => {
 
     switch (type) {
       case 'one_item':
-        return <RenderOneItem key={i} items={el.items} name={el.name} type={el.type} />
+        return (
+          <OneItem
+            key={i}
+            items={el.items}
+            name={el.name}
+            type={el.type}
+            styleClass={styleClass}
+          />
+        )
       
       case 'one_item_with_text':
         return <RenderOneItemWithText key={i} items={el.items} name={el.name} type={el.type} />
       
       case 'two_item':
-        return <RenderTwoItem key={i} items={el.items} name={el.name} type={el.type} />
+        return (
+          <TwoItem
+            key={i}
+            items={el.items}
+            name={el.name}
+            type={el.type}
+            styleClass={{ item: styleClass['two-item'], title: styleClass.title }}
+          />
+        )
 
       case 'ad':
-        return <RenderAdItem key={i} items={el.items} name={el.name} type={el.type} />
+        return (
+          <AdItem
+            key={i}
+            items={el.items}
+            name={el.name}
+            type={el.type}
+            styleClass={{ item: styleClass['ad-item'] }}
+          />
+        )
 
       default:
         return null;
@@ -102,7 +87,7 @@ class Product extends Component {
       list: null
     }
 
-    KZ.setRootClassName('active-product');
+    // KZ.setRootClassName('active-product');
   }
 
   componentWillMount () {
@@ -114,7 +99,7 @@ class Product extends Component {
 
   render () {
     return (
-      <div className={productStyle.product}>
+      <div className={styleClass.product}>
         <Header />
 
         <div className="content">

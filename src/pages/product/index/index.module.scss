@@ -24,9 +24,11 @@
     }
     &:nth-of-type(2) {
       padding: 0 0.533333rem;
-      // .one-item {
-
-      // }
+      .one-item {
+        .fk {
+          color: #f00;
+        }
+      }
       // .one-item-with-text {
         
       // }
