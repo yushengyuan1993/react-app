@@ -3,12 +3,12 @@ import React, { Component } from 'react';
 
 // import { Carousel, WingBlank } from 'antd-mobile';
 
-import Tabbar from '../../components/tabbar/tabbar.js';
-import Header from '../../components/header/header.js';
+import Tabbar from '../../../components/tabbar/tabbar.js';
+import Header from '../../../components/header/header.js';
 
 import productStyle from './product.module.scss';
 
-import productList from '../../mock/product_list.js';
+import productList from '../../../mock/product_list.js';
 
 // const banner = ['static/images/course/8.png', 'static/images/course/9.png', 'static/images/course/10.png'];
 

@@ -1,7 +1,7 @@
 
-import Product from '../pages/index/product.js';
-import Study from '../pages/index/study.js';
-import Mine from '../pages/index/mine.js';
+import Product from '../pages/product/index/product.js';
+import Study from '../pages/study/index/study.js';
+import Mine from '../pages/mine/index/mine.js';
 
 import Order from '../pages/mine/order.js';
 import Remind from '../pages/mine/remind.js';
