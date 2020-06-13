@@ -2,7 +2,7 @@
   width: 100%;
   padding-top: 1.6rem;
   padding-bottom: 1.36rem;
-  .title {
+  :global .title {
     display: flex;
     align-items: center;
     padding: 0.4rem 0 0.32rem;
@@ -24,26 +24,19 @@
     }
     &:nth-of-type(2) {
       padding: 0 0.533333rem;
-      .one-item {
-        .fk {
+      :global .one-item {
+        .sss {
           color: #f00;
         }
       }
       // .one-item-with-text {
         
       // }
-      .two-item {
+      :global .two-item {
         >div:last-of-type {
           >div {
             display: inline-block;
             width: 4.266667rem;
-
-            // &:nth-child(2n) {
-              
-            // }
-            // &:nth-child(2n+1) {
-              
-            // }
             >div {
               &:first-of-type {
                 position: relative;
@@ -78,7 +71,7 @@
           }
         }
       }
-      .ad-item {
+      :global .ad-item {
         padding: 0.16rem 0;
         >img {
           width: 100%;

@@ -1,10 +1,10 @@
-import Product from '../pages/product/index/index.js';
-import Study from '../pages/study/index/index.js';
-import Mine from '../pages/mine/index/index.js';
+import Product from '../pages/product/index/index.jsx';
+import Study from '../pages/study/index/index.jsx';
+import Mine from '../pages/mine/index/index.jsx';
 
-import Order from '../pages/mine/order/order.js';
-import Remind from '../pages/mine/remind/remind.js';
-import HeadTeacher from '../pages/mine/teacher/teacher';
+import Order from '../pages/mine/order/order.jsx';
+import Remind from '../pages/mine/remind/remind.jsx';
+import HeadTeacher from '../pages/mine/teacher/teacher.jsx';
 
 const routes = [
   // {

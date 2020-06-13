@@ -9,7 +9,7 @@ class Ad extends Component {
   }
   render() { 
     return (
-      <div className={this.props.styleClass.item}>
+      <div className="ad-item">
         <img src={this.props.items[0].cover} alt="cover" />
       </div>
     );

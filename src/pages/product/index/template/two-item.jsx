@@ -10,8 +10,8 @@ class TwoItem extends Component {
   
   render() { 
     return (
-      <div className={this.props.styleClass.item}>
-        <div className={this.props.styleClass.title}>
+      <div className="two-item">
+        <div className="title">
           <span></span>
           <strong>{this.props.name}</strong>
         </div>

@@ -12,14 +12,14 @@ import TwoItem from './template/two-item';
 import AdItem from './template/ad-item';
 import OneItem from './template/one-item';
 
-import styleClass from './index.module.scss';
+import styles from './index.module.scss';
 
 // const banner = ['static/images/course/8.png', 'static/images/course/9.png', 'static/images/course/10.png'];
 
 const RenderOneItemWithText = (props) => {
   return (
     <div className="one-item-with-text">
-      <div className={styleClass.title}>
+      <div className="title">
         <span></span>
         <strong>{props.name}</strong>
       </div>
@@ -36,40 +36,16 @@ const RenderContent = (props) => {
 
     switch (type) {
       case 'one_item':
-        return (
-          <OneItem
-            key={i}
-            items={el.items}
-            name={el.name}
-            type={el.type}
-            styleClass={styleClass}
-          />
-        )
+        return <OneItem key={i} items={el.items} name={el.name} type={el.type} />
       
       case 'one_item_with_text':
         return <RenderOneItemWithText key={i} items={el.items} name={el.name} type={el.type} />
       
       case 'two_item':
-        return (
-          <TwoItem
-            key={i}
-            items={el.items}
-            name={el.name}
-            type={el.type}
-            styleClass={{ item: styleClass['two-item'], title: styleClass.title }}
-          />
-        )
+        return <TwoItem key={i} items={el.items} name={el.name} type={el.type} />
 
       case 'ad':
-        return (
-          <AdItem
-            key={i}
-            items={el.items}
-            name={el.name}
-            type={el.type}
-            styleClass={{ item: styleClass['ad-item'] }}
-          />
-        )
+        return <AdItem key={i} items={el.items} name={el.name} type={el.type} />
 
       default:
         return null;
@@ -99,7 +75,7 @@ class Product extends Component {
 
   render () {
     return (
-      <div className={styleClass.product}>
+      <div className={styles.product}>
         <Header />
 
         <div className="content">
