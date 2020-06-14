@@ -3,9 +3,7 @@ import React, { Component } from 'react';
 class OneItem extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-
-    };
+    this.state = {};
   }
   render() { 
     return (

@@ -5,28 +5,17 @@ import React, { Component } from 'react';
 
 import productList from '../../../mock/product_v2';
 
-import Tabbar from '../../../components/tabbar/tabbar';
-import Header from '../../../components/header/header';
+import Tabbar from '../../../components/tabbar/tabbar.jsx';
+import Header from '../../../components/header/header.jsx';
 
-import TwoItem from './template/two-item';
-import AdItem from './template/ad-item';
-import OneItem from './template/one-item';
+import TwoItem from './template/two-item.jsx';
+import AdItem from './template/ad-item.jsx';
+import OneItem from './template/one-item.jsx';
+import OneItemWithText from './template/one-item-with-text.jsx';
 
 import styles from './index.module.scss';
 
 // const banner = ['static/images/course/8.png', 'static/images/course/9.png', 'static/images/course/10.png'];
-
-const RenderOneItemWithText = (props) => {
-  return (
-    <div className="one-item-with-text">
-      <div className="title">
-        <span></span>
-        <strong>{props.name}</strong>
-      </div>
-      
-    </div>
-  )
-}
 
 const RenderContent = (props) => {
   const list = props.data;
@@ -39,7 +28,7 @@ const RenderContent = (props) => {
         return <OneItem key={i} items={el.items} name={el.name} type={el.type} />
       
       case 'one_item_with_text':
-        return <RenderOneItemWithText key={i} items={el.items} name={el.name} type={el.type} />
+        return <OneItemWithText key={i} items={el.items} name={el.name} type={el.type} />
       
       case 'two_item':
         return <TwoItem key={i} items={el.items} name={el.name} type={el.type} />

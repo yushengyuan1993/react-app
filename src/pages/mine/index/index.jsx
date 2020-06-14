@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 import React, { Component } from 'react';
 
-import Tabbar from '../../../components/tabbar/tabbar.js';
+import Tabbar from '../../../components/tabbar/tabbar.jsx';
 import { List } from 'antd-mobile';
 
 import './index.scss';
