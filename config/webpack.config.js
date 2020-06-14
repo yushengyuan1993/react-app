@@ -487,8 +487,8 @@ module.exports = function(webpackEnv) {
       //     debug:"debug"
       //   }),
       new CopyWebpackPlugin([
-        // { from: '3276170_ace.yvshare.cn.key', to: './' },
-        // { from: '3276170_ace.yvshare.cn.pem', to: './' },
+        { from: '3276170_ace.yvshare.cn.key', to: './' },
+        { from: '3276170_ace.yvshare.cn.pem', to: './' },
       ]),
       // Generates an `index.html` file with the <script> injected.
       new HtmlWebpackPlugin(
