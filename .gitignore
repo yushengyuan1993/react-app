@@ -28,3 +28,6 @@ tree.txt
 ./*.key
 ./*.pem
 ./*.crt
+*.key
+*.pem
+*.crt
