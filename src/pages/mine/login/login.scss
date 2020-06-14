@@ -1,0 +1,108 @@
+.login {
+  position: relative;
+  height: 100vh;
+  min-height: 17.786667rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #FFDB00 url('/static/images/mine/login_bg.png') repeat-y center top / 100% 17.786667rem;
+  .back {
+    position: absolute;
+    top: 0.24rem;
+    right: 0.24rem;
+    width: 0.8rem;
+    height: 0.8rem;
+    background: url('/static/images/mine/close_t1.png') no-repeat center center / 60% 60%;
+  }
+  .logo {
+    width: 7.52rem;
+    height: 2.48rem;
+    margin: 0 auto;
+    background: url('/static/images/mine/logo.png') no-repeat center center / 100% 100%;
+  }
+  .content {
+    width: 9.333333rem;
+    height: 12.16rem;
+    padding: 0.64rem 0.4rem 0.4rem;
+    border-radius: 0.133333rem;
+    background-color: #FFFFFF;
+    margin: 0.4rem auto 0;
+    box-shadow: 1px 6px 8px 0px rgba(254,204,0,0.36);
+    .title {
+      padding: 0 0.16rem;
+      font-size: 0.64rem;
+      font-weight: bold;
+    }
+    .warn {
+      margin: 0.24rem 0;
+      padding: 0 0.16rem;
+      height: 0.48rem;
+      font-size: 0.4rem;
+      color: #FE4802;
+    }
+    .item {
+      position: relative;
+      display: flex;
+      align-items: center;
+      margin-top: 0.56rem;
+      padding: 0.32rem 0;
+      border-bottom: 1px solid #E5E5E5;
+      input {
+        width: 100%;
+        height: 0.64rem;
+        font-size: 0.48rem;
+      }
+      .btn {
+        position: absolute;
+        &.clear {
+          width: 0.48rem;
+          height: 0.48rem;
+          right: 0.24rem;
+          background: url('/static/images/mine/close_t2.png') no-repeat center center / 100% 100%;
+        }
+        &.get_captcha {
+          right: 0.24rem;
+          font-size: 0.4rem;
+          &.init {
+            color: #333333;
+          }
+          &.timeout {
+            color: #999999;;
+          }
+        }
+      }
+    }
+    .operation {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0.4rem 0.16rem;
+      .switch {
+        font-size: 0.4rem;
+        color: #666666;
+      }
+    }
+    .footer {
+      margin-top: 0.88rem;
+      .btn {
+        width: 100%;
+        height: 1.36rem;
+        line-height: 1.36rem;
+        border-radius: 0.133333rem;
+        text-align: center;
+        font-size: 0.48rem;
+        &[data-status="off"] {
+          color: #FFFFFF;
+          background-color: #CCCCCC;
+        }
+        &[data-status="on"] {
+          color: #333333;
+          background: linear-gradient(-90deg,rgba(253,198,0,1),rgba(255,220,2,1),rgba(255,240,0,1));
+        }
+      }
+    }
+    .login-by-phone {
+
+    }
+  }
+}

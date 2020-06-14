@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from 'react-dom';
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 // import { Provider } from 'react-redux';
 
@@ -15,7 +15,7 @@ import './assets/css/normalize.css';
 
 const route = routers.map((item, i) => <Route path={item.path} component={item.component} key={i} />);
 
-ReactDOM.render(
+render(
   <Router>
     <Switch>
       {route}

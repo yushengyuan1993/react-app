@@ -23,7 +23,7 @@ class Mine extends Component {
         },
         {
           title: '学习时间提醒',
-          link: 'remind',
+          link: 'order',
           desc: '10:30'
         }
       ],
@@ -34,10 +34,12 @@ class Mine extends Component {
         },
         {
           title: '兑换好礼',
-          link: 'teacher'
+          link: 'order'
         }
       ]
     };
+
+    this.getLogin = this.getLogin.bind(this);
   }
 
   componentWillMount() {
@@ -45,11 +47,16 @@ class Mine extends Component {
   }
 
   handleClickItem(link) {
-    console.log(this.props);
     this.props.history.push({
       pathname: link,
       search: 'name=ysy&age=18',
       state: 'oops'
+    });
+  }
+
+  getLogin() {
+    this.props.history.push({
+      pathname: 'login',
     });
   }
 
@@ -81,7 +88,7 @@ class Mine extends Component {
     return (
       <div className="mine">
         <div className="header">
-          <div>
+          <div onClick={this.getLogin}>
             <div className="avatar"><img src="/static/images/avatar.jpg" alt="avatar"/></div>
             <div className="name">神奇海螺</div>
           </div>

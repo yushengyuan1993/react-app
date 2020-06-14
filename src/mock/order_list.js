@@ -1,11 +1,11 @@
 export default [
   {
     "cover": "/static/images/course/1.png",
-    "title": "魔法作文课",
+    "title": "改变世界的十大科学家",
     "course_price": "59.00",
     "course_subject": 0,
     "promotional_price": "59.00",
-    "status": 1,
+    "status": 0,
     "course_status_desc": "开课中",
     "order_id": 172641,
     "order_num": "20190603509022081917",
@@ -17,7 +17,7 @@ export default [
   },
   {
     "cover": "/static/images/course/2.png",
-    "title": "改变世界的十大科学家",
+    "title": "地球生命史",
     "course_price": "24.90",
     "course_subject": 2,
     "promotional_price": "9.90",
@@ -51,7 +51,7 @@ export default [
   },
   {
     "cover": "/static/images/course/4.png",
-    "title": "孩子最爱的拼音动画课",
+    "title": "成语故事",
     "course_price": "5.00",
     "course_subject": 0,
     "promotional_price": "1.00",
@@ -67,12 +67,12 @@ export default [
     "order_create_time": "2019-06-01 18:16:04"
   },
   {
-    "cover": "/static/images/course/5.png",
-    "title": "少年世界史",
+    "cover": "/static/images/course/14.png",
+    "title": "看图写话三步法",
     "course_price": "5.00",
     "course_subject": 0,
     "promotional_price": "1.00",
-    "status": 2,
+    "status": 0,
     "course_status_desc": "开课中",
     "order_id": 171386,
     "order_num": "20190601113259445045",
@@ -84,12 +84,12 @@ export default [
     "order_create_time": "2019-06-01 18:04:22"
   },
   {
-    "cover": "/static/images/course/6.png",
-    "title": "看图写话三步法",
+    "cover": "/static/images/course/17.png",
+    "title": "孩子最爱的拼音动画课",
     "course_price": "5.00",
     "course_subject": 0,
     "promotional_price": "1.00",
-    "status": 0,
+    "status": 2,
     "course_status_desc": "开课中",
     "order_id": 171380,
     "order_num": "20190601640298811790",

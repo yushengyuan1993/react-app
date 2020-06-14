@@ -16,6 +16,17 @@
           line-height: 1.2rem;
           display: flex;
           justify-content: space-between;
+          .order-status {
+            &[data-status="0"] {
+              color: #FE4802;
+            }
+            &[data-status="1"] {
+              color: #3ECC88;
+            }
+            &[data-status="2"] {
+              color: #999999;
+            }
+          }
         }
         &.body {
           display: flex;
