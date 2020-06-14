@@ -3,14 +3,14 @@ import React, { Component } from 'react';
 // import style from './teacher.scss';
 
 class HeadTeacher extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props);
     this.state = {
       title: 'head-teacher'
-    }
+    };
   }
 
-  render () {
+  render() {
     return (
       <div>
         我的班主任

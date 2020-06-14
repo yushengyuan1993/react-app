@@ -6,16 +6,18 @@ import Tabbar from '../../../components/tabbar/tabbar.jsx';
 import style from './index.module.scss';
 
 class Study extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props);
     this.state = {
       intro: '这是 学习 页面'
-    }
+    };
+  }
 
+  componentWillMount() {
     KZ.setRootClassName('active-study');
   }
 
-  render () {
+  render() {
     return (
       <div className={style.study}>
         <div className="content"><p>学习</p></div>

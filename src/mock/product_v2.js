@@ -74,7 +74,7 @@ export default [
       "tag2": ["10节", "39574人已学"],
       "product_id": 3000069
     }, {
-      "cover": "/static/images/course/10.png",
+      "cover": "/static/images/course/10.jpg",
       "title": "作文大冒险",
       "tag1": ["记事技巧", "趣味动画", "活学活用"],
       "tag2": ["10节", "11362人已学"],

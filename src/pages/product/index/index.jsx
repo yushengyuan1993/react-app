@@ -45,24 +45,23 @@ const RenderContent = (props) => {
 }
 
 class Product extends Component {
-
-  constructor (props) {
+  constructor(props) {
     super(props);
     this.state = {
       list: null
     }
-
-    // KZ.setRootClassName('active-product');
   }
 
-  componentWillMount () {
+  componentWillMount() {
+    KZ.setRootClassName('active-product');
+
     // ajax
     this.setState({
       list: productList
     })
   }
 
-  render () {
+  render() {
     return (
       <div className={styles.product}>
         <Header />

@@ -15,7 +15,7 @@ import mine_selected from '../../assets/images/mine_selected.png';
 // * * 图片资源 * * * * * * * * * * * * * * *
 
 class Footer extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props);
     this.state = {
       selectedTab: props.tab,
@@ -24,7 +24,7 @@ class Footer extends Component {
   }
 
   // 选中 `选课`
-  onSelectTab (tab) {
+  onSelectTab(tab) {
     this.setState(() => ({
       selectedTab: tab
     }));
@@ -36,7 +36,7 @@ class Footer extends Component {
     });
   }
 
-  render () {
+  render() {
     return (
       <div className="component-tabbar">
         <TabBar

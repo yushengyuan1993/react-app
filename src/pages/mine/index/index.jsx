@@ -9,7 +9,7 @@ import './index.scss';
 const Item = List.Item;
 
 class Mine extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props);
     this.state = {
       list1: [
@@ -37,12 +37,14 @@ class Mine extends Component {
           link: 'head-teacher'
         }
       ]
-    }
+    };
+  }
 
+  componentWillMount() {
     KZ.setRootClassName('active-mine');
   }
 
-  handleClickItem (link) {
+  handleClickItem(link) {
     console.log(this.props);
     this.props.history.push({
       pathname: link,
@@ -51,7 +53,7 @@ class Mine extends Component {
     });
   }
 
-  render () {
+  render() {
     const item1 = this.state.list1.map((el, i) => 
       <Item
         key={i}

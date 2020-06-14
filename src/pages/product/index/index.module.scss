@@ -55,7 +55,63 @@
         }
       }
       :global .one-item-with-text {
-        
+        .container {
+          .item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0.56rem 0;
+            &:first-of-type, &:last-of-type {
+              margin: 0;
+            }
+            .cover {
+              position: relative;
+              width: 2.8rem;
+              height: 2.8rem;
+              border-radius: 0.266667rem;
+              .icon {
+                position: absolute;
+                bottom: 0.16rem;
+                right: 0.16rem;
+                width: 0.48rem;
+                height: 0.48rem;
+              }
+            }
+            .content {
+              width:  calc(100% - 2.8rem);
+              padding-left: 0.16rem;
+              .name {
+                font-size: 0.426667rem;
+                font-weight: bold;
+              }
+              .tags {
+                margin: 0.32rem 0;
+                .tag {
+                  display: inline-block;
+                  padding: 0.026667rem 0.18rem;
+                  font-size: 0.32rem;
+                  margin-left: 0.08rem;
+                  border-radius: 1rem;
+                  border: 1px solid #FFD889;
+                  color: #FF9B00;
+                  background-color: #FFF2DD;
+                  &:first-of-type {
+                    margin: 0;
+                  }
+                }
+              }
+              .infos {
+                .info {
+                  margin-right: 0.32rem;
+                  padding-left: 0.4rem;
+                  height: 0.4rem;
+                  font-size: 0.32rem;
+                  color: #999999;
+                }
+              }
+            }
+          }
+        }
       }
       :global .two-item {
         >div:last-of-type {

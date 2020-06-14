@@ -4,12 +4,12 @@ import { Link } from 'react-router-dom';
 import style from './header.module.scss';
 
 class Header extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props);
     this.state = {};
   }
 
-  render () {
+  render() {
     return (
       <div className={`border-top ${style.header}`}>
         <div className="user">

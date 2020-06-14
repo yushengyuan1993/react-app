@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import './order.scss';
 
 class Order extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props);
     this.state = {
       list:  [
@@ -109,11 +109,10 @@ class Order extends Component {
             "order_create_time": "2019-06-01 17:57:02"
         }
     ]
-    }
-    // console.error(props)
+    };
   }
 
-  transformStatus (st) {
+  transformStatus(st) {
     if (st === 1) {
       return '付款成功'
     } else if (st === 2) {
@@ -123,7 +122,7 @@ class Order extends Component {
     }
   }
 
-  render () {
+  render() {
     const item = this.state.list.map((el, i) => 
       <li key={i}>
         <div className="header border-top">
