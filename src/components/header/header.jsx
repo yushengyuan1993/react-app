@@ -13,7 +13,7 @@ class Header extends Component {
     return (
       <div className={`border-top ${style.header}`}>
         <div className="user">
-          <span className="avatar"><img src="static/images/avatar.jpg" alt="avatar"/></span>
+          <span className="avatar"><img src="/static/images/avatar.jpg" alt="avatar"/></span>
           <span className="name">神奇海螺</span>
         </div>
         <div className="info">

@@ -6,7 +6,7 @@ class HeadTeacher extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      title: 'head-teacher'
+      title: 'teacher'
     };
   }
 

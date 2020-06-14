@@ -14,7 +14,7 @@ class Study extends Component {
   }
 
   componentWillMount() {
-    KZ.setRootClassName('active-study');
+    
   }
 
   render() {

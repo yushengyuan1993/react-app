@@ -19,7 +19,7 @@ class Mine extends Component {
         },
         {
           title: '我的班主任',
-          link: 'head-teacher'
+          link: 'teacher'
         },
         {
           title: '学习时间提醒',
@@ -34,14 +34,14 @@ class Mine extends Component {
         },
         {
           title: '兑换好礼',
-          link: 'head-teacher'
+          link: 'teacher'
         }
       ]
     };
   }
 
   componentWillMount() {
-    KZ.setRootClassName('active-mine');
+    
   }
 
   handleClickItem(link) {

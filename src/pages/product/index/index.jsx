@@ -15,12 +15,10 @@ import OneItemWithText from './template/one-item-with-text.jsx';
 
 import styles from './index.module.scss';
 
-// const banner = ['static/images/course/8.png', 'static/images/course/9.png', 'static/images/course/10.png'];
+// const banner = ['/static/images/course/8.png', '/static/images/course/9.png', '/static/images/course/10.png'];
 
 const RenderContent = (props) => {
-  const list = props.data;
-
-  const item = list.map((el, i) => {
+  const item = props.list.map((el, i) => {
     const type = el.type;
 
     switch (type) {
@@ -49,12 +47,10 @@ class Product extends Component {
     super(props);
     this.state = {
       list: null
-    }
+    };
   }
 
   componentWillMount() {
-    KZ.setRootClassName('active-product');
-
     // ajax
     this.setState({
       list: productList
@@ -67,7 +63,7 @@ class Product extends Component {
         <Header />
 
         <div className="content">
-          <RenderContent data={this.state.list} />
+          <RenderContent list={this.state.list} />
         </div>
 
         <Tabbar tab="product" />

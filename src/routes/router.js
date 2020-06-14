@@ -34,7 +34,7 @@ const routes = [
     component: Remind
   },
   {
-    path: "/head-teacher",
+    path: "/teacher",
     component: HeadTeacher
   },
 ]
