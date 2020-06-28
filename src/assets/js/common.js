@@ -17,12 +17,12 @@ export default {
   },
 
   // 获取文件扩展名
-  getFileExtension (filename) {
+  GetFileExtension (filename) {
     return filename.slice((filename.lastIndexOf(".") - 1 >>> 0) + 2);
   },
 
   // 获取URL参数值
-  getParam (name) {
+  GetParam (name) {
     let search = document.location.search;
     let pattern = new RegExp("[?&]" + name + "=([^&]+)", "g");
     let matcher = pattern.exec(search);
@@ -47,7 +47,7 @@ export default {
    * @param {String} value 
    * @param {Number} day   过期时间
    */
-  setCookie (name, value, day) {
+  SetCookie (name, value, day) {
     if (day !== 0) { // 当设置的时间等于0时，不设置expires属性，cookie在浏览器关闭后删除
       var expires = day * 24 * 60 * 60 * 1000;
       var date = new Date(+new Date()+expires);
@@ -57,7 +57,7 @@ export default {
     }
   },
   // 获取cookies
-  getCookie (name) {
+  GetCookie (name) {
     let arr = null;
     let reg = new RegExp("(^| )"+name+"=([^;]*)(;|$)");
  
@@ -68,7 +68,7 @@ export default {
     }
   },
   // 删除cookies
-  removeCookie (name) {
+  RemoveCookie (name) {
     let exp = new Date(); 
     exp.setTime(exp.getTime() - 1); 
     let cval = this.getCookie(name); 
@@ -78,7 +78,7 @@ export default {
   },
 
   // sessionStorage 相关操作
-  setSession (key, value=null) {
+  SetSession (key, value=null) {
     let _type = Object.prototype.toString.call(value);
 
     if (_type === '[object String]' ||
@@ -105,7 +105,7 @@ export default {
    * @param {String} key  需要获取的 sessionStorage 的 key
    * @param {String} type 需要取得的值的类型，仅有 array/object/string 三种 
    */
-  getSession (key, type) {
+  GetSession (key, type) {
     let result = sessionStorage[key];
 
     if ( !result || result === 'null' ) { // 取一个不存在的 sessionStorage 时，返回 null
@@ -124,23 +124,23 @@ export default {
       throw new Error('请确认取值的类型有效！');
     }
   },
-  removeSession (key) {
+  RemoveSession (key) {
     sessionStorage.removeItem(key);
   },
 
   // class 相关操作
-  hasClass (el, cls) {
+  HasClass (el, cls) {
     cls = cls || '';
     if (cls.replace(/\s/g, '').length === 0) return false; //当cls没有参数时，返回false
     return new RegExp(' ' + cls + ' ').test(' ' + el.className + ' ');
   },
-  addClass (el, cls) {
-    if (!this.hasClass(el, cls)) {
+  AddClass (el, cls) {
+    if (!this.HasClass(el, cls)) {
       el.className = el.className === '' ? cls : el.className + ' ' + cls;
     }
   },
-  removeClass (el, cls) {
-    if (this.hasClass(el, cls)) {
+  RemoveClass (el, cls) {
+    if (this.HasClass(el, cls)) {
       var newClass = ' ' + el.className.replace(/[\t\r\n]/g, '') + ' ';
       while (newClass.indexOf(' ' + cls + ' ') >= 0) {
         newClass = newClass.replace(' ' + cls + ' ', ' ');
@@ -149,13 +149,8 @@ export default {
     }
   },
 
-  // 设置 #root 的 class
-  setRootClassName (cls) {
-    document.querySelector('#root').className = cls;
-  },
-
   // 移除数组指定值的元素
-  removeArrayEl (arr, v) {
+  RemoveArrayItem (arr, v) {
     let i = arr.indexOf(v);
 
     if (i > -1) {
@@ -164,23 +159,8 @@ export default {
     return arr;
   },
 
-  // 动态添加脚本
-  loadScript (url) {
-    let parentEl = document.getElementsByTagName('head')[0];
-    let targetEL = parentEl.querySelectorAll('script')[0];
-    let script = document.createElement('script');
-    script.type = 'text/javascript';
-    script.src = url;
-    parentEl.insertBefore(script, targetEL);
-
-      // let script = document.createElement('script');
-      // script.type = 'text/javascript';
-      // script.src = url;
-      // document.body.appendChild(script);
-  },
-
   // 图片预加载
-  preloadImage (arr) {
+  PreloadImage (arr) {
     let imgList = [];
 
     for (let i = 0, j = arr.length; i < j; i ++) {

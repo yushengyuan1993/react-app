@@ -15,31 +15,52 @@ const routes = [
   // },
   {
     path: "/product",
-    component: Product
+    component: Product,
+    meta: {
+      title: '选课',
+    }
   },
   {
     path: "/study",
-    component: Study
+    component: Study,
+    meta: {
+      title: '学习',
+    }
   },
   {
     path: "/mine",
-    component: Mine
+    component: Mine,
+    meta: {
+      title: '我的',
+    }
   },
   {
     path: "/login",
-    component: Login
+    component: Login,
+    meta: {
+      title: '登录',
+    }
   },
   {
     path: "/order",
-    component: Order
+    component: Order,
+    meta: {
+      title: '我的订单',
+    }
   },
   {
     path: "/remind",
-    component: Remind
+    component: Remind,
+    meta: {
+      title: '学习时间提醒',
+    }
   },
   {
     path: "/teacher",
-    component: HeadTeacher
+    component: HeadTeacher,
+    meta: {
+      title: '我的班主任',
+    }
   },
 ]
 
