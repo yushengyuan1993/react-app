@@ -1,8 +1,6 @@
 /* eslint-disable no-undef */
 import React, { Component } from 'react';
 
-// import { Carousel, WingBlank } from 'antd-mobile';
-
 import productList from '../../../mock/product_v2';
 
 import Tabbar from '../../../components/tabbar/tabbar.jsx';
@@ -12,10 +10,11 @@ import TwoItem from './template/two-item.jsx';
 import AdItem from './template/ad-item.jsx';
 import OneItem from './template/one-item.jsx';
 import OneItemWithText from './template/one-item-with-text.jsx';
+import Banner from './template/banner.jsx';
 
 import styles from './index.module.scss';
 
-// const banner = ['/static/images/course/8.png', '/static/images/course/9.png', '/static/images/course/10.png'];
+const banner = ['/static/images/course/18.png', '/static/images/course/19.png', '/static/images/course/20.png'];
 
 const RenderContent = (props) => {
   const item = props.list.map((child, i) => {
@@ -46,14 +45,16 @@ class Product extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      list: null
+      list: null,
+      banner: null,
     };
   }
 
   componentWillMount() {
     // ajax
     this.setState({
-      list: productList
+      list: productList,
+      banner: banner,
     })
   }
 
@@ -63,6 +64,7 @@ class Product extends Component {
         <Header />
 
         <div className="content">
+          <Banner list={this.state.banner} />
           <RenderContent list={this.state.list} />
         </div>
 
