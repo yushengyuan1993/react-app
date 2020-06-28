@@ -18,21 +18,21 @@ import styles from './index.module.scss';
 // const banner = ['/static/images/course/8.png', '/static/images/course/9.png', '/static/images/course/10.png'];
 
 const RenderContent = (props) => {
-  const item = props.list.map((el, i) => {
-    const type = el.type;
+  const item = props.list.map((child, i) => {
+    const type = child.type;
 
     switch (type) {
       case 'one_item':
-        return <OneItem key={i} items={el.items} name={el.name} type={el.type} />
+        return <OneItem key={i} items={child.items} name={child.name} type={child.type} />
       
       case 'one_item_with_text':
-        return <OneItemWithText key={i} items={el.items} name={el.name} type={el.type} />
+        return <OneItemWithText key={i} items={child.items} name={child.name} type={child.type} />
       
       case 'two_item':
-        return <TwoItem key={i} items={el.items} name={el.name} type={el.type} />
+        return <TwoItem key={i} items={child.items} name={child.name} type={child.type} />
 
       case 'ad':
-        return <AdItem key={i} items={el.items} name={el.name} type={el.type} />
+        return <AdItem key={i} items={child.items} name={child.name} type={child.type} />
 
       default:
         return null;
